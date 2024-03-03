@@ -1,5 +1,6 @@
 ---
 title: "TreeRingShape"
+author: "ISHIDA M."
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{TreeRingShape}
