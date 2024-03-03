@@ -15,6 +15,11 @@ knitr::opts_chunk$set(
 )
 ```
 
+## Recording tree-ring shapes of tree disks using manual digitizing and interpolating model
+
+Interpolates tree ring between representative (manual input) tree rings with tree ring points
+
+
 ```{r setup}
 library(TreeRingShape)
 names(TR)  # TR is a sample object of classTreeRingShape S4
