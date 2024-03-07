@@ -1,0 +1,30 @@
+---
+title: "TreeRingShape"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{TreeRingShape}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(TreeRingShape)
+names(TR)  # TR is a sample object of classTreeRingShape S4
+help("classTreeRingShape-class",package="TreeRingShape")
+ Lplot(TR@L)
+ points(TR@P,pch=".",col="blue")
+TR. <- TreeRingsInterpolation(TR)
+ya <- plot_year_RingArea(TR.@L2, 2018)$Year_TreeRingArea
+plot(ya,type='b')
+tri. <- TreeRingIndex(ya)
+lines(tri.$spline,col='red',lw=2)
+plot(tri.$idx,type='b')
+abline(h=1,col='red')
+```
