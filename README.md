@@ -21,5 +21,7 @@ It should be noted, however, that currently, information regarding the
 shape of the annual rings needs to be manually inputted, which can be
 labor-intensive.
 
+![Qgis2R](https://github.com/ishidamgm/TreeRingShape/assets/40332131/0ec0fffb-3f93-40fe-a425-b50c93e1e169)
+
 \*\* see also \*\*
 <https://www.sanchikanri.com/treering/TreeRingShape.html>
