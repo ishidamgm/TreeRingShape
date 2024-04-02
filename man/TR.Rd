@@ -11,7 +11,7 @@ An object of class \code{classTreeRingShape} of length 1.
 TR
 }
 \description{
-This dataset contains tree ring shape data for Abies_277_h400 sampled from Tateyama, central Japan.
+This data set contains tree ring shape data for Abies_277_h400 sampled from Tateyama, central Japan.
 It's intended to demonstrate the structure and use of `TreeRingShape` class objects within the package.
 }
 \examples{

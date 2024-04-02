@@ -18,7 +18,7 @@ Read representative tree ring lines from shape files
 \examples{
  \dontrun{
  setwd('../Abies_277_h400')
- TreeRingsLines(TR)
+ TR <- TreeRingsLines(TR)
  }
 
 }

@@ -57,9 +57,6 @@ TreeRingsPoints <- function(TR) {
 
   return(TR)
 
-  # save(P,P00,YR_P,n_id,YR_P,n_YR,file=paste0(P_filename,'.RData'))
-  # return(list(P=P,P00=P00,YR_P=YR_P,n_id=n_id,YR_P=YR_P,n_YR=n_YR))
-
 }
 
 
@@ -73,31 +70,16 @@ TreeRingsPoints <- function(TR) {
 #' @examples
 #'  \dontrun{
 #'  setwd('../Abies_277_h400')
-#'  TreeRingsLines(TR)
+#'  TR <- TreeRingsLines(TR)
 #'  }
 #'
 TreeRingsLines <- function(TR) {
-  L <- TR@L
-  P00 <- TR@P00
   P <- TR@P
-  L_ring_colname <- TR@L_ring.tag
-  d <- shapefiles::read.shapefile(TR@L_filename)  ### read tree ring line from shape file
-  #d <- sf::st_read(TR@L_filename)  ### read tree ring line from shape file
-  ring <- as.numeric(as.vector(d$dbf$dbf[, L_ring_colname]))
-
-
-  # sorting tree ring lines with `ring` (year from outermost) 'jjj' is the order #
-  jjj <- order(ring)
-  (ln <- length(d$shp$shp))
-  L <- c()
-  for (i in 1:ln) L <- c(L, list(as.matrix(d$shp$shp[[jjj[i]]]$points)))  # Lの追加
-
-  (YR_L <- c(as.numeric(as.vector(d$dbf$dbf[, L_ring_colname])))[jjj])
-
-  names(L) <- YR_L  # add names of tree ring line #
-
+  L <- ReadShapefile_TreeRings(TR@L_filename,ring.tag = "ring")
+  ln <- length(L)
+  YR_L <- as.numeric(names(L))
   # conversion of coordinate center point to (0,0)
-  for (i in 1:ln) L[[i]] <- t(t(L[[i]]) - P00)
+  for (i in 1:ln) L[[i]] <- t(t(L[[i]]) - TR@P00)
 
   # plot representative tree rings and measurement points
   plot(L[[1]], type = "l", col = "red")
@@ -122,7 +104,6 @@ TreeRingsLines <- function(TR) {
   # measurement points
   points(P$deg, P$r, col = "red", pch = ".")
 
-  # save(L,L_,file=paste0(L_filename,'.RData'))
   TR@L <- L
   TR@L_ <- L_
   TR@YR_L <- YR_L
@@ -142,7 +123,13 @@ TreeRingsLines <- function(TR) {
 #' @examples
 #' slotNames(TR)
 #' help("classTreeRingShape-class",package="TreeRingShape")
-#' TR. <- TreeRingsInterpolation(TR)
+#' TR <- TreeRingsInterpolation(TR)
+#' ya <- plot_year_RingArea(TR@L2, 2018)$Year_TreeRingArea
+#' plot(ya,type='b')
+#' tri. <- TreeRingIndex(ya)
+#' lines(tri.$spline,col='red',lw=2)
+#' plot(tri.$idx,type='b')
+#' abline(h=1,col='red')
 #'
 TreeRingsInterpolation <- function(TR) {
 
@@ -165,7 +152,7 @@ TreeRingsInterpolation <- function(TR) {
 
   i12 <- match(YR_L[YRn], YR_P)
 
-  # new tree rings interpalated
+  # new tree rings interpolated
   YR2 <- YR_L[YRn[1]]:YR_L[rev(YRn)[1]]
 
 
@@ -193,10 +180,10 @@ TreeRingsInterpolation <- function(TR) {
     L_out <- L[[YRn[iii - 1]]]
     L_in <- L[[YRn[iii]]]
     np <- nstP(L_out, L_in)
+
     plot(L[[1]], type = "l", col = "red")
     lapply(L, lines)
     segments(L_out[, 1], L_out[, 2], L_in[np, 1], L_in[np, 2], col = "blue")
-
 
     ## plot
     rdst. <- c()
@@ -248,8 +235,66 @@ TreeRingsInterpolation <- function(TR) {
 
   return(TR)
 
+}
 
 
+#' Construct a object (TR) of classTreeRingShape
+#'
+#'
+#'
+#' @param P_filename   file name of shape file (P) for tree ring points  (without extention)
+#' @param L_filename   file name of shape file (L) for tree ring lines  (without extention)
+#' @param L2_filename  file name of shape file (L2) for tree ring lines interpolated (without extention)
+#' @param P_id.tag     column name of id in shape file (P), default is 'id'
+#' @param P_ring.tag   column name of ring no.(ordinaly year,outermost=0) in shape file (L), default is 'ring'
+#' @param L_ring.tag   column name of ring no.(ordinaly year,outermost=0) in shape file (L), default is 'ring'
+#' @return generated new object from classTreeRingShape
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' (wd. <- getwd())
+#' setwd('../Abies_277_h400')
+#' # sample data enable to download from
+#' # https://www.sanchikanri.com/treering/Abies_277_h400.zip
+#' dir()
+#' TR.<-TreeRingShape(
+#' P_filename='Abies_277_h400_TreeRing_Points.shp',
+#' L_filename='Abies_277_h400_TreeRing_Representative.shp',
+#' L2_filename='Abies_277_h400_TreeRing.shp',
+#' P_id.tag='id',P_ring.tag='ring',
+#' L_ring.tag='ring')
+#'
+#'  TR.
+#'  slotNames(TR.)
+#'  str(TR.)
+#'  dev.new()
+#' Lplot(TR.@L2)
+#'
+#' }
+#'
+#'
+TreeRingShape <- function(P_filename, L_filename, L2_filename, P_id.tag = "id", P_ring.tag = "ring", L_ring.tag = "ring") {
 
+  # generate new TR object from classTreeRingShape
+
+  TR <- new("classTreeRingShape")  # treering_cls #str(TR)
+
+  # tree ring points
+  TR@P_filename <- P_filename  #'points277_h400'
+  TR@P_id.tag <- "id"
+  TR@P_ring.tag <- "ring"
+  TR <- TreeRingsPoints(TR)
+
+  # representative tree ring lines
+  TR@L_filename <- L_filename  # 'line277_h400'
+  TR@L_ring.tag <- L_ring.tag
+  TR <- TreeRingsLines(TR)
+
+  # representative + interpolated tree ring lines
+  TR@L2_filename <- L2_filename  #
+  TR <- TreeRingsInterpolation(TR)
+
+  return(TR)
 
 }

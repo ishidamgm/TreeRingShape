@@ -23,6 +23,6 @@ Lplot2(L, i.ring = 1:length(L), nrow = 3, ncol = 3, ask = "FALSE", ...)
 Draw a graphics of tree rings by 1 ring (3*3 in a screen)
 }
 \examples{
-Lplot2(TR@L2,i.ring=1:9, nrow=1,ncol=1,type='b')
-Lplot2(TR@L2,type='b')
+Lplot2(TR@L,i.ring=1:9, nrow=1,ncol=1,type='b')
+Lplot2(TR@L,type='b')
 }

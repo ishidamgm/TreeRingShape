@@ -10,7 +10,7 @@ class of TreeRingShape
 \section{Slots}{
 
 \describe{
-\item{\code{P_filename}}{character. file name of shape file (P) for tree ring points  (without extention)}
+\item{\code{P_filename}}{character. file name of shape file (P) for tree ring points}
 
 \item{\code{P_id.tag}}{character.   column name of id in shape file (P), default is 'id'}
 
@@ -24,7 +24,7 @@ class of TreeRingShape
 
 \item{\code{YR_P}}{numeric.         total number of tree rings, unique(P$ring)}
 
-\item{\code{L_filename}}{character. file name of shape file (L) for tree ring lines  (without extention)}
+\item{\code{L_filename}}{character. file name of shape file (L) for tree ring lines}
 
 \item{\code{L_ring.tag}}{character. column name of ring no.(ordinaly year,outermost=0) in shape file (L), default is 'ring'}
 
@@ -36,7 +36,7 @@ class of TreeRingShape
 
 \item{\code{ln}}{numeric.           total number of  representative tree rings,  length(L)}
 
-\item{\code{L2_filename}}{character. file name of shape file (L2) for tree ring lines interpolated (without extention)}
+\item{\code{L2_filename}}{character. file name of shape file (L2) for tree ring lines interpolated}
 
 \item{\code{L2}}{list.              x,y coordinates of representative + interpolated tree rings}
 

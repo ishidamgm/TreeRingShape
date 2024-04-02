@@ -4,13 +4,12 @@
 \alias{WriteShapefile_TreeRings}
 \title{Write a shapefile of interpolated tree rings}
 \usage{
-WriteShapefile_TreeRings(L2, filename = "test")
+WriteShapefile_TreeRings(L2, filename = "test.shp")
 }
 \arguments{
 \item{L2}{is as list of Tree ring polygons (X, Y)}
 
-\item{filename}{is a file name of shape file written to disk.
-The extension (.shp) is unnecessary.}
+\item{filename}{is a shape file(path) name written to disk.}
 }
 \value{
 data of Shapefile
@@ -20,8 +19,8 @@ Write a shapefile of interpolated tree rings
 }
 \examples{
 
-\dontrun{
-file.path <- '../Abies_277_h400_test'
-WriteShapefile_TreeRings (TR@L, file.path)
+\dontrun{#'
+WriteShapefile_TreeRings (TR@L2, tempfile("TreeRingShape_test",fileext = ".shp"))
+dir(tempdir())
 }
 }

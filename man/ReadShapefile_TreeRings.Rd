@@ -5,26 +5,25 @@
 \title{Read Shapefile_TreeRings}
 \usage{
 ReadShapefile_TreeRings(
-  filename = "Abies_277_h400_TreeRing_Representative",
+  filename = "Abies_277_h400_TreeRing_Representative.shp",
   ring.tag = "ring"
 )
 }
 \arguments{
-\item{filename}{is a file name of shape file written to disk.
-The extension (.shp) is unnecessary.}
+\item{filename}{is a file name(path) of shape file written to disk.}
 
 \item{ring.tag}{string, column name of ring years  (0 is cambium layer)}
 }
 \value{
-a data frame of TreeRingPoints (radial input and correction points)
+a list of tree ring lines
 }
 \description{
 Read Shapefile_TreeRings
 }
 \examples{
 \dontrun{
-file.path <- '../Abies_277_h400/Abies_277_h400_TreeRing_Representative'
-Lplot(ReadShapefile_TreeRings(file.path))
+filename <- '../Abies_277_h400/Abies_277_h400_TreeRing_Representative.shp'
+Lplot(ReadShapefile_TreeRings(filename))
 }
 
 }

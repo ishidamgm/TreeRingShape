@@ -5,7 +5,7 @@
 \title{Read a shape file of Tree Ring Points ( P : radial input and correction points)}
 \usage{
 ReadShapefile_TreeRingPoints(
-  filename = "points277_h600",
+  filename = "Abies_277_h400_TreeRing_Points.shp",
   id.tag = "id",
   ring.tag = "ring"
 )
@@ -30,7 +30,7 @@ Read a shape file of Tree Ring Points ( P : radial input and correction points)
 # sample data of 'Abies_277_h400' can be download from
 #https://www.sanchikanri.com/treering/Abies_277_h400.zip
 
-file.path <- '../Abies_277_h400/Abies_277_h400_TreeRing_Points'
+file.path <- '../Abies_277_h400/Abies_277_h400_TreeRing_Points.shp'
 ReadShapefile_TreeRingPoints(file.path,id.tag='id',ring.tag='ring')
 
 }

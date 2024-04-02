@@ -19,6 +19,7 @@ plot_TreeRing_df
 Draw a Tree ring of a disk from data frame(x,y,year)
 }
 \examples{
-plot_TreeRing_df(TR@L_,1)
+TR@L_ <- Llist2dataframe(TR@L)     # data frame of tree rings
+plot_TreeRing_df(TR@L_, year =1)
 
 }

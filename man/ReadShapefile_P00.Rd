@@ -5,14 +5,13 @@
 \title{Return x,y coordinates of a tree ring center point (P00) from shape file of tree ring points}
 \usage{
 ReadShapefile_P00(
-  filename = "points277_h600",
+  filename = "Abies_277_h400_TreeRing_Points.shp",
   id.tag = "id",
   ring.tag = "ring"
 )
 }
 \arguments{
-\item{filename}{a file name of Tree ring points (shape file )
-The extension (.shp) is unnecessary.}
+\item{filename}{a shape file name of Tree ring points}
 
 \item{id.tag}{string, column name of id (attribute table)}
 
@@ -28,7 +27,7 @@ Return x,y coordinates of a tree ring center point (P00) from shape file of tree
 # This example NOT be run examples
 \dontrun{
 # read a original point P00 ####
-file.path <- '../Abies_277_h400/Abies_277_h400_TreeRing_Points'
-ReadShapefile_P00(file.path)
+filename <- '../Abies_277_h400/Abies_277_h400_TreeRing_Points.shp'
+ReadShapefile_P00(filename)
 }
 }

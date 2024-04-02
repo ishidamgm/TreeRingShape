@@ -18,6 +18,12 @@ Interpolates tree ring between representative (manual input) tree rings with tre
 \examples{
 slotNames(TR)
 help("classTreeRingShape-class",package="TreeRingShape")
-TR. <- TreeRingsInterpolation(TR)
+TR <- TreeRingsInterpolation(TR)
+ya <- plot_year_RingArea(TR@L2, 2018)$Year_TreeRingArea
+plot(ya,type='b')
+tri. <- TreeRingIndex(ya)
+lines(tri.$spline,col='red',lw=2)
+plot(tri.$idx,type='b')
+abline(h=1,col='red')
 
 }

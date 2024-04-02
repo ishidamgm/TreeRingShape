@@ -19,6 +19,7 @@ idx ; data.frame(year,TreeRingIndex)
 Calculate tree ring index from chronosequence data (year,growth)
 }
 \examples{
+\dontrun{
 ya <- plot_year_RingArea(TR@L2, 2018)$Year_TreeRingArea
 plot(ya,type='b')
 tri. <- TreeRingIndex(ya)
@@ -26,8 +27,12 @@ lines(tri.$spline,col='red',lw=2)
 plot(tri.$idx,type='b')
 abline(h=1,col='red')
 }
+}
 \references{
 Cook, E., & Peters, K. (1981). The smoothing spline,
 a new approach to standardising forest interior tree-ring.Trre-ring Bulletin,
 41, 45–53.
+}
+\seealso{
+\code{\link{TreeRingsInterpolation}}
 }

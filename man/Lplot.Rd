@@ -20,6 +20,6 @@ Plot a graphics of tree rings
 }
 \examples{
 
-Lplot(TR@L2,main=TR@L2_filename)
-Lplot(TR@L2,rn=1:50,col='blue',main=TR@L2_filename)
+Lplot(TR@L,main=TR@L_filename)
+Lplot(TR@L,rn=1:20,col='blue',main=TR@L_filename)
 }

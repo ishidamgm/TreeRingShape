@@ -11,8 +11,8 @@
 #'
 #' @examples
 #'
-#' Lplot(TR@L2,main=TR@L2_filename)
-#' Lplot(TR@L2,rn=1:50,col='blue',main=TR@L2_filename)
+#' Lplot(TR@L,main=TR@L_filename)
+#' Lplot(TR@L,rn=1:20,col='blue',main=TR@L_filename)
 Lplot <- function(L, rn = 1:length(L), col = "red", ...) {
   plot(L[[1]], type = "l", ...)
   for (i in rn) lines(L[[i]], col = col)
@@ -30,8 +30,8 @@ Lplot <- function(L, rn = 1:length(L), col = "red", ...) {
 #' @export
 #'
 #' @examples
-#' Lplot2(TR@L2,i.ring=1:9, nrow=1,ncol=1,type='b')
-#' Lplot2(TR@L2,type='b')
+#' Lplot2(TR@L,i.ring=1:9, nrow=1,ncol=1,type='b')
+#' Lplot2(TR@L,type='b')
 Lplot2 <- function(L, i.ring = 1:length(L), nrow = 3, ncol = 3, ask = "FALSE", ...) {
   par(mfrow = c(nrow, ncol))
   for (i in i.ring) plot(L[[i]], main = paste(i, ":", names(L)[i], "yr"), ...)
@@ -94,9 +94,10 @@ plot_TreeRing <- function(L , year = 0, ...) {   #= TR@L
 #' @seealso \code{\link{Llist2dataframe}}  for the data frame
 #'
 #' @examples
-#' df <- TR@L_  # data frame of tree rings
-#' names(df)
-#' plot_TreeRings_df(df)
+#'
+#' TR@L_ <- Llist2dataframe(TR@L)     # data frame of tree rings
+#' names(TR@L_)
+#' plot_TreeRings_df(TR@L_)
 #'
 plot_TreeRings_df <- function(df , year_label = "yr") {
   plot(df[df[, year_label] == 0, c("x", "y")], type = "l")
@@ -112,7 +113,8 @@ plot_TreeRings_df <- function(df , year_label = "yr") {
 #' @export
 #'
 #' @examples
-#' plot_TreeRing_df(TR@L_,1)
+#' TR@L_ <- Llist2dataframe(TR@L)     # data frame of tree rings
+#' plot_TreeRing_df(TR@L_, year =1)
 #'
 plot_TreeRing_df <- function(df , year = 0, year_label = "yr") {
   plot(df[df[, year_label] == year, c("x", "y")], type = "l")
@@ -126,8 +128,12 @@ plot_TreeRing_df <- function(df , year = 0, year_label = "yr") {
 #' @return list of Year_DiskArea and Year_TreeRingArea
 #' @export
 #'
+#'@seealso \code{\link{TreeRingsInterpolation}}
+#'
 #' @examples
+#' \dontrun{
 #' plot_year_RingArea(TR@L2,2018)
+#' }
 plot_year_RingArea <- function(L2, yr_end = 2018) {
   a <- rev(sapply(L2, area))
   yr_a <- (yr_end - length(a) + 1):yr_end
@@ -160,13 +166,17 @@ plot_year_RingArea <- function(L2, yr_end = 2018) {
 #'
 #' @export
 #'
+#'@seealso \code{\link{TreeRingsInterpolation}}
+#'
 #' @examples
+#' \dontrun{
 #' ya <- plot_year_RingArea(TR@L2, 2018)$Year_TreeRingArea
 #' plot(ya,type='b')
 #' tri. <- TreeRingIndex(ya)
 #' lines(tri.$spline,col='red',lw=2)
 #' plot(tri.$idx,type='b')
 #' abline(h=1,col='red')
+#' }
 
 TreeRingIndex <- function(ya, spar = 0.8) {
   sm <- stats::smooth.spline(ya, spar = spar)

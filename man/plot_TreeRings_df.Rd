@@ -17,9 +17,10 @@ Plot tree rings from data fame
 This function draws Tree rings of a disk from data frame(x,y,year).
 }
 \examples{
-df <- TR@L_  # data frame of tree rings
-names(df)
-plot_TreeRings_df(df)
+
+TR@L_ <- Llist2dataframe(TR@L)     # data frame of tree rings
+names(TR@L_)
+plot_TreeRings_df(TR@L_)
 
 }
 \seealso{
