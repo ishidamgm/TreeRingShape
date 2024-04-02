@@ -1,7 +1,7 @@
 Package: TreeRingShape
 Type: Package
 Title: Recording tree-ring shapes of tree disks using manual digitizing and interpolating model
-Version: 0.0.9002
+Version: 0.1.0
 Author: person("Megumi", "Ishida", , "ishidam@sanchikanri.com", role =c("aut") ,
            comment = c(ORCID = "0000-0003-0978-5388")
 Maintainer: Megumi ISHIDA <ishidam@sanchikanri.com>
