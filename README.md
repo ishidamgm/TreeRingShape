@@ -1,6 +1,6 @@
 # TreeRingShape
 
-This package is designed for efficiently recording the shape of all
+This **R** package is designed for efficiently recording the shape of all
 annual rings in a tree trunk cross-section. It **interpolates the annual
 rings (L2)** between **representative annual ring lines (L)** from the
 **annual ring points (P)** and **representative annual ring lines**
