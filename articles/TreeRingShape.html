@@ -202,20 +202,10 @@ details</td>
 </tr>
 </tbody>
 </table>
-<div class="section level5">
-<h5 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
-</h5>
-<p>** sample data of ‘Abies_277_h400’ can be download from ** <a href="https://www.sanchikanri.com/treering/Abies_277_h400.zip" class="external-link uri">https://www.sanchikanri.com/treering/Abies_277_h400.zip</a></p>
-<p>library(TreeRingShape)</p>
-<p>TR.&lt;-TreeRingShape(
-P_filename=‘Abies_277_h400_TreeRing_Points.shp’,
-L_filename=‘Abies_277_h400_TreeRing_Representative.shp’,
-L2_filename=‘Abies_277_h400_TreeRing.shp’,
-P_id.tag=‘id’,P_ring.tag=‘ring’, L_ring.tag=‘ring’)</p>
-<p><br><br> After execution, data for Append (Table 1) will be added.
-Procedures</p>
 </div>
-</div>
+<div class="section level2">
+<h2 id="procedures">Procedures<a class="anchor" aria-label="anchor" href="#procedures"></a>
+</h2>
 <div class="section level3">
 <h3 id="i--processing-the-disc">I. Processing the Disc<a class="anchor" aria-label="anchor" href="#i--processing-the-disc"></a>
 </h3>
@@ -280,11 +270,30 @@ zero and goes inward.</li>
 </ol>
 </li>
 </ol>
+</div>
+<div class="section level3">
+<h3 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
+</h3>
+<p>** sample data of ‘Abies_277_h400’ can be download from ** <a href="https://www.sanchikanri.com/treering/Abies_277_h400.zip" class="external-link uri">https://www.sanchikanri.com/treering/Abies_277_h400.zip</a></p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ishidamgm/TreeRingShape" class="external-link">TreeRingShape</a></span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">TR</span><span class="op">)</span>  <span class="co"># TR is a sample object of classTreeRingShape S4</span></span>
-<span><span class="co">#&gt; NULL</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/help.html" class="external-link">help</a></span><span class="op">(</span><span class="st">"classTreeRingShape-class"</span>,package<span class="op">=</span><span class="st">"TreeRingShape"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#dontrun{</span></span>
+<span><span class="co"># TR&lt;-TreeRingShape( P_filename='Abies_277_h400_TreeRing_Points.shp',</span></span>
+<span><span class="co"># L_filename='Abies_277_h400_TreeRing_Representative.shp',</span></span>
+<span><span class="co"># L2_filename='Abies_277_h400_TreeRing.shp',</span></span>
+<span><span class="co"># P_id.tag='id',P_ring.tag='ring', L_ring.tag='ring')</span></span>
+<span><span class="co">#}</span></span>
+<span></span>
+<span><span class="co"># After execution, data for Append (Table 1) will be added.</span></span>
+<span></span>
+<span><span class="fu">slotNames</span><span class="op">(</span><span class="va">TR</span><span class="op">)</span>  <span class="co"># TR is a sample object of classTreeRingShape S4</span></span>
+<span><span class="co">#&gt;  [1] "P_filename"  "P_id.tag"    "P_ring.tag"  "P"           "P00"        </span></span>
+<span><span class="co">#&gt;  [6] "n_id"        "YR_P"        "L_filename"  "L_ring.tag"  "L"          </span></span>
+<span><span class="co">#&gt; [11] "L_"          "YR_L"        "ln"          "L2_filename" "L2"         </span></span>
+<span><span class="co">#&gt; [16] "n_YR"</span></span>
+<span></span>
+<span><span class="co"># help("classTreeRingShape-class",package="TreeRingShape")</span></span>
 <span><span class="fu"><a href="../reference/Lplot.html">Lplot</a></span><span class="op">(</span><span class="va">TR</span><span class="op">@</span><span class="va">L</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/points.html" class="external-link">points</a></span><span class="op">(</span><span class="va">TR</span><span class="op">@</span><span class="va">P</span>,pch<span class="op">=</span><span class="st">"."</span>,col<span class="op">=</span><span class="st">"blue"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="TreeRingShape_files/figure-html/setup-1.png" width="700"></p>
@@ -311,6 +320,7 @@ zero and goes inward.</li>
 Applications in R. Chapman and Hall/CRC. <a href="https://doi.org/10.1201/9780429459016" class="external-link uri">https://doi.org/10.1201/9780429459016</a></p>
 <p>QGIS Development Team. (2024). QGIS Geographic Information System.
 QGIS Association. <a href="https://www.qgis.org" class="external-link uri">https://www.qgis.org</a></p>
+</div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
