@@ -1,0 +1,11 @@
+pandoc: 3.1.11
+pkgdown: 2.0.7
+pkgdown_sha: ~
+articles:
+  TreeRingShape: TreeRingShape.html
+  TreeRingShape_jp: jp/TreeRingShape_jp.html
+last_built: 2024-04-03T05:57Z
+urls:
+  reference: https://ishidamgm.github.io/TreeRingShape/reference
+  article: https://ishidamgm.github.io/TreeRingShape/articles
+
