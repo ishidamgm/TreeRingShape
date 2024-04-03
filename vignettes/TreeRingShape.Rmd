@@ -8,6 +8,9 @@ date: "`r Sys.Date()`"
 #     toc_float: true
 #     　collapsed: false
 #     　 number_sections: true
+#     includes:
+#     　in_header: header.html
+      
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{TreeRingShape}
@@ -24,6 +27,7 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
+<link rel="icon" href="../docs/favicon.png" />
 
 This package is designed for efficiently recording the shape of all
 annual rings in a tree trunk cross-section. It **interpolates the annual
