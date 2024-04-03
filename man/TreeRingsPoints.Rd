@@ -16,7 +16,7 @@ Read TreeRingsPoints shape file, check and save parameters
 }
 \examples{
 \dontrun{
-P_filename<-'points277_h600'\t\t#####shape file name (without extention 'abc.shp' -> 'abc')
+P_filename<-'points277_h600'　#####shape file name (without extention 'abc.shp' -> 'abc')
 TreeRingsPoints(TR)
 #' }
 }
