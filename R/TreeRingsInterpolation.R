@@ -9,8 +9,8 @@
 #'
 #' @examples
 #' \dontrun{
-#' P_filename<-'points277_h600'　#####shape file name (without extention 'abc.shp' -> 'abc')
-#' TreeRingsPoints(TR)
+#'  setwd('../Abies_277_h400') #set working directory with shape files
+#'  TreeRingsPoints(TR)
 #' #' }
 
 
@@ -69,7 +69,7 @@ TreeRingsPoints <- function(TR) {
 #'
 #' @examples
 #'  \dontrun{
-#'  setwd('../Abies_277_h400')
+#'  setwd('../Abies_277_h400') #set working directory with shape files
 #'  TR <- TreeRingsLines(TR)
 #'  }
 #'
@@ -122,7 +122,7 @@ TreeRingsLines <- function(TR) {
 #'
 #' @examples
 #' slotNames(TR)
-#' help("classTreeRingShape-class",package="TreeRingShape")
+#' # help("classTreeRingShape-class",package="TreeRingShape")
 #' TR <- TreeRingsInterpolation(TR)
 #' ya <- plot_year_RingArea(TR@L2, 2018)$Year_TreeRingArea
 #' plot(ya,type='b')
@@ -253,11 +253,10 @@ TreeRingsInterpolation <- function(TR) {
 #'
 #' @examples
 #' \dontrun{
-#' (wd. <- getwd())
-#' setwd('../Abies_277_h400')
+#'
 #' # sample data enable to download from
 #' # https://www.sanchikanri.com/treering/Abies_277_h400.zip
-#' dir()
+#' setwd('../Abies_277_h400') #set working directory with shape files
 #' TR.<-TreeRingShape(
 #' P_filename='Abies_277_h400_TreeRing_Points.shp',
 #' L_filename='Abies_277_h400_TreeRing_Representative.shp',
@@ -268,8 +267,7 @@ TreeRingsInterpolation <- function(TR) {
 #'  TR.
 #'  slotNames(TR.)
 #'  str(TR.)
-#'  dev.new()
-#' Lplot(TR.@L2)
+#' ' Lplot(TR.@L2)
 #'
 #' }
 #'

@@ -78,22 +78,9 @@ ring shape data.
 | L2_filename  | file name of shape file (L2) for tree ring lines interpolated        | \*.shp                       |
 | **etc.**     | see **classTreeRingShape** for details                               |                              |
 
-##### Usage
-
-\*\* sample data of 'Abies_277_h400' can be download from \*\*
-<https://www.sanchikanri.com/treering/Abies_277_h400.zip>
 
 
-
-library(TreeRingShape)
-
-TR.\<-TreeRingShape( P_filename='Abies_277_h400_TreeRing_Points.shp',
-L_filename='Abies_277_h400_TreeRing_Representative.shp',
-L2_filename='Abies_277_h400_TreeRing.shp',
-P_id.tag='id',P_ring.tag='ring', L_ring.tag='ring')
-
-<br><br> After execution, data for Append (Table 1) will be added.
-Procedures
+## Procedures
 
 ### I. Processing the Disc
 
@@ -151,10 +138,30 @@ Procedures
         the outer circumference and the disc. The count starts from the
         cambium layer as zero and goes inward.
 
+### Usage
+
+\*\* sample data of 'Abies_277_h400' can be download from \*\*
+<https://www.sanchikanri.com/treering/Abies_277_h400.zip>
+
+
+
+
+
 ```{r setup}
 library(TreeRingShape)
-names(TR)  # TR is a sample object of classTreeRingShape S4
-help("classTreeRingShape-class",package="TreeRingShape")
+
+#dontrun{
+# TR<-TreeRingShape( P_filename='Abies_277_h400_TreeRing_Points.shp',
+# L_filename='Abies_277_h400_TreeRing_Representative.shp',
+# L2_filename='Abies_277_h400_TreeRing.shp',
+# P_id.tag='id',P_ring.tag='ring', L_ring.tag='ring')
+#}
+
+# After execution, data for Append (Table 1) will be added.
+
+slotNames(TR)  # TR is a sample object of classTreeRingShape S4
+
+# help("classTreeRingShape-class",package="TreeRingShape")
 Lplot(TR@L)
 points(TR@P,pch=".",col="blue")
 TR. <- TreeRingsInterpolation(TR)
