@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">TreeRingShape</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,12 +23,6 @@
 </li>
 <li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
-</li>
-<li class="nav-item dropdown">
-  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
-  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/jp/TreeRingShape_jp.html">TreeRingShape</a>
-  </div>
 </li>
 <li class="nav-item">
   <a class="nav-link" href="../news/index.html">Changelog</a>
@@ -105,12 +99,12 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
-<span class="r-in"><span><span class="op">(</span><span class="va">wd.</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/getwd.html" class="external-link">getwd</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html" class="external-link">setwd</a></span><span class="op">(</span><span class="st">'../Abies_277_h400'</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># sample data enable to download from</span></span></span>
 <span class="r-in"><span><span class="co"># https://www.sanchikanri.com/treering/Abies_277_h400.zip</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/list.files.html" class="external-link">dir</a></span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html" class="external-link">setwd</a></span><span class="op">(</span><span class="st">'../Abies_277_h400'</span><span class="op">)</span> <span class="co">#set working directory with shape files</span></span></span>
 <span class="r-in"><span><span class="va">TR.</span><span class="op">&lt;-</span><span class="fu">TreeRingShape</span><span class="op">(</span></span></span>
 <span class="r-in"><span>P_filename<span class="op">=</span><span class="st">'Abies_277_h400_TreeRing_Points.shp'</span>,</span></span>
 <span class="r-in"><span>L_filename<span class="op">=</span><span class="st">'Abies_277_h400_TreeRing_Representative.shp'</span>,</span></span>
@@ -121,8 +115,7 @@
 <span class="r-in"><span> <span class="va">TR.</span></span></span>
 <span class="r-in"><span> <span class="fu">slotNames</span><span class="op">(</span><span class="va">TR.</span><span class="op">)</span></span></span>
 <span class="r-in"><span> <span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">TR.</span><span class="op">)</span></span></span>
-<span class="r-in"><span> <span class="fu"><a href="https://rdrr.io/r/grDevices/dev.html" class="external-link">dev.new</a></span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="Lplot.html">Lplot</a></span><span class="op">(</span><span class="va">TR.</span><span class="op">@</span><span class="va">L2</span><span class="op">)</span></span></span>
+<span class="r-in"><span> <span class="fu"><a href="Lplot.html">Lplot</a></span><span class="op">(</span><span class="va">TR.</span><span class="op">@</span><span class="va">L2</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-in"><span></span></span>
@@ -134,7 +127,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p></p><p>Developed by Megumi ISHIDA.</p>
+  <p></p><p>Developed by Megumi Ishida.</p>
 </div>
 
 <div class="pkgdown-footer-right">
