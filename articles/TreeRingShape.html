@@ -26,7 +26,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">TreeRingShape</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0.9001</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,9 +77,243 @@
 
     
     
+<p>This package is designed for efficiently recording the shape of all
+annual rings in a tree trunk cross-section. It <strong>interpolates the
+annual rings (L2)</strong> between <strong>representative annual ring
+lines (L)</strong> from the <strong>annual ring points (P)</strong> and
+<strong>representative annual ring lines</strong> inputted on radii
+measured in GIS software (Qgis). A <strong>“representative annual
+ring”</strong> refers to the annual rings that characterize the shape of
+the outer circumference and the cross-section of the disc, requiring
+fewer rings the closer their shape is to a perfect circle. Although
+annual rings grow concentrically around the pith, their shape is not
+perfectly circular. Traditionally, dendrochronology and tree-ring
+analysis have evaluated tree growth based on the width of the annual
+rings. However, with the advancement of image analysis technologies,
+there has been an increasing number of studies evaluating growth based
+on the area of the annual rings. Most of these studies have focused on
+conifer plantation samples, where the annual rings are clearly defined.
+However, this package also enables the recording of annual ring shapes
+in trees from natural forests, where the ring shapes are more complex.
+It should be noted, however, that currently, information regarding the
+shape of the annual rings needs to be manually inputted, which can be
+labor-intensive.</p>
+<p>** see also ** <a href="https://www.sanchikanri.com/treering/TreeRingShape.html" class="external-link uri">https://www.sanchikanri.com/treering/TreeRingShape.html</a></p>
+<div class="float">
+<img src="Qgis2R.jpg" alt="Qgis&gt;&gt;&gt;R"><div class="figcaption">Qgis&gt;&gt;&gt;R</div>
+</div>
+<div class="section level4">
+<h4 id="execute">Execute<a class="anchor" aria-label="anchor" href="#execute"></a>
+</h4>
+<p>The TreeRingShape() function establishes the S4 class
+classTreeRingShape and executes the interpolation of annual rings to
+complete the annual ring shape data.</p>
+</div>
+<div class="section level4">
+<h4 id="table-1--classtreeringshape-tr---treeringshape">Table 1. classTreeRingShape : TR &lt;- TreeRingShape()<a class="anchor" aria-label="anchor" href="#table-1--classtreeringshape-tr---treeringshape"></a>
+</h4>
+<table class="table">
+<colgroup>
+<col width="25%">
+<col width="43%">
+<col width="31%">
+</colgroup>
+<thead><tr class="header">
+<th align="left">Slot</th>
+<th align="left">R</th>
+<th align="left">Qgis</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong><em>Input</em></strong></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>P</strong></td>
+<td align="left"><strong>data frame of Tree Ring Points</strong></td>
+<td align="left">Points shape, field(id,ring)</td>
+</tr>
+<tr class="odd">
+<td align="left">P_filename</td>
+<td align="left">shape file name of tree ring points</td>
+<td align="left">*.shp</td>
+</tr>
+<tr class="even">
+<td align="left">P_id.tag</td>
+<td align="left">column name of id in shape file (P)</td>
+<td align="left">default ‘id’</td>
+</tr>
+<tr class="odd">
+<td align="left">P_ring.tag</td>
+<td align="left">column name of ring no.(ordinaly year,outermost=0)</td>
+<td align="left">default ‘ring’</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>L</strong></td>
+<td align="left"><strong>list of Representative Tree Ring
+Lines</strong></td>
+<td align="left">Lines shape, field(ring)</td>
+</tr>
+<tr class="odd">
+<td align="left">L_filename</td>
+<td align="left">shape file name for representative tree ring lines
+(L)</td>
+<td align="left">*.shp</td>
+</tr>
+<tr class="even">
+<td align="left">L_ring.tag</td>
+<td align="left">column name of ring no.(ordinaly year,outermost=0) in
+shape file (L)</td>
+<td align="left">default ‘ring’</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong><em>Append</em></strong></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>L2</strong></td>
+<td align="left"><strong>list of All Tree Ring Lines including
+interpolated lines</strong></td>
+<td align="left">Lines shape, field(ring)</td>
+</tr>
+<tr class="odd">
+<td align="left">L2_filename</td>
+<td align="left">file name of shape file (L2) for tree ring lines
+interpolated</td>
+<td align="left">*.shp</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>etc.</strong></td>
+<td align="left">see <strong>classTreeRingShape</strong> for
+details</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section level2">
+<h2 id="procedures">Procedures<a class="anchor" aria-label="anchor" href="#procedures"></a>
+</h2>
+<div class="section level3">
+<h3 id="i--processing-the-disc">I. Processing the Disc<a class="anchor" aria-label="anchor" href="#i--processing-the-disc"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li><p>Harvest the tree disc, avoiding areas with branches, rot, or
+cracks as much as possible.</p></li>
+<li><p>Polish the disc until the annual rings are clearly
+visible.</p></li>
+<li><p>Draw lines from the pith in generally eight directions with a
+pencil. These lines are referred to as radii measurement lines.</p></li>
+<li><p>Starting from the cambium layer (the outermost layer of wood
+touching the bark) as zero, count the annual rings towards the inside
+and mark them.</p></li>
+<li><p>Ensure that the number of annual rings matches across all radii
+measurement lines.</p></li>
+<li><p>Trace the lines of representative annual rings with a pencil.
+This improves work efficiency, especially in areas where there are many
+rings or the rings are unclear.</p></li>
+</ol>
+</div>
+<div class="section level3">
+<h3 id="ii--scanning-the-entire-disc-image">II. Scanning the Entire Disc Image<a class="anchor" aria-label="anchor" href="#ii--scanning-the-entire-disc-image"></a>
+</h3>
+<ul>
+<li>Scan the entire disc image at 1200 dpi or higher using a flatbed
+scanner or a high-resolution digital camera capable of geometric
+correction.</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="iii--inputting-annual-ring-coordinates-using-qgis">III. Inputting Annual Ring Coordinates Using Qgis<a class="anchor" aria-label="anchor" href="#iii--inputting-annual-ring-coordinates-using-qgis"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>
+<p>Project Properties</p>
+<p>Set the project’s CRS to ‘none’. Leave the default CRS
+blank.</p>
+</li>
+<li>
+<p>Adding Layers</p>
+<ol style="list-style-type: decimal">
+<li>Import the annual rings raster image (TreeRing***.tif).</li>
+<li>Create a new shapefile layer for annual ring points
+(TreeRingPoints***.shp) with integer attributes for id and ring.</li>
+<li>Create a new shapefile layer for annual ring lines
+(TreeRingLines***.shp) with an integer attribute for ring.</li>
+</ol>
+</li>
+<li>
+<p>Manually Inputting Annual Ring Coordinates</p>
+<ol style="list-style-type: decimal">
+<li>Annual Ring Points ** id ** is the number of the radii measurement
+line or the correction point group number, and ring is typically the
+count of the annual rings from the cambium layer inward. Mark all annual
+rings along the radii measurement lines. After completing the annual
+ring interpolation, if there is any discrepancy in the rings, add
+correction points where the rings must pass.</li>
+<li>Representative Annual Ring Lines Input the coordinates while tracing
+the lines of annual rings that characterize the shape of the outer
+circumference and the disc. The count starts from the cambium layer as
+zero and goes inward.</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section level3">
+<h3 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
+</h3>
+<p>** sample data of ‘Abies_277_h400’ can be download from ** <a href="https://www.sanchikanri.com/treering/Abies_277_h400.zip" class="external-link uri">https://www.sanchikanri.com/treering/Abies_277_h400.zip</a></p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ishidamgm/TreeRingShape" class="external-link">TreeRingShape</a></span><span class="op">)</span></span></code></pre></div>
-  </main>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ishidamgm/TreeRingShape" class="external-link">TreeRingShape</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#dontrun{</span></span>
+<span><span class="co"># TR&lt;-TreeRingShape( P_filename='Abies_277_h400_TreeRing_Points.shp',</span></span>
+<span><span class="co"># L_filename='Abies_277_h400_TreeRing_Representative.shp',</span></span>
+<span><span class="co"># L2_filename='Abies_277_h400_TreeRing.shp',</span></span>
+<span><span class="co"># P_id.tag='id',P_ring.tag='ring', L_ring.tag='ring')</span></span>
+<span><span class="co">#}</span></span>
+<span></span>
+<span><span class="co"># After execution, data for Append (Table 1) will be added.</span></span>
+<span></span>
+<span><span class="fu">slotNames</span><span class="op">(</span><span class="va">TR</span><span class="op">)</span>  <span class="co"># TR is a sample object of classTreeRingShape S4</span></span>
+<span><span class="co">#&gt;  [1] "P_filename"  "P_id.tag"    "P_ring.tag"  "P"           "P00"        </span></span>
+<span><span class="co">#&gt;  [6] "n_id"        "YR_P"        "L_filename"  "L_ring.tag"  "L"          </span></span>
+<span><span class="co">#&gt; [11] "L_"          "YR_L"        "ln"          "L2_filename" "L2"         </span></span>
+<span><span class="co">#&gt; [16] "n_YR"</span></span>
+<span></span>
+<span><span class="co"># help("classTreeRingShape-class",package="TreeRingShape")</span></span>
+<span><span class="fu"><a href="../reference/Lplot.html">Lplot</a></span><span class="op">(</span><span class="va">TR</span><span class="op">@</span><span class="va">L</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/points.html" class="external-link">points</a></span><span class="op">(</span><span class="va">TR</span><span class="op">@</span><span class="va">P</span>,pch<span class="op">=</span><span class="st">"."</span>,col<span class="op">=</span><span class="st">"blue"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="TreeRingShape_files/figure-html/setup-1.png" width="700"></p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">TR.</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/TreeRingsInterpolation.html">TreeRingsInterpolation</a></span><span class="op">(</span><span class="va">TR</span><span class="op">)</span></span></code></pre></div>
+<p><img src="TreeRingShape_files/figure-html/setup-2.png" width="700"><img src="TreeRingShape_files/figure-html/setup-3.png" width="700"><img src="TreeRingShape_files/figure-html/setup-4.png" width="700"><img src="TreeRingShape_files/figure-html/setup-5.png" width="700"><img src="TreeRingShape_files/figure-html/setup-6.png" width="700"><img src="TreeRingShape_files/figure-html/setup-7.png" width="700"><img src="TreeRingShape_files/figure-html/setup-8.png" width="700"><img src="TreeRingShape_files/figure-html/setup-9.png" width="700"><img src="TreeRingShape_files/figure-html/setup-10.png" width="700"><img src="TreeRingShape_files/figure-html/setup-11.png" width="700"><img src="TreeRingShape_files/figure-html/setup-12.png" width="700"><img src="TreeRingShape_files/figure-html/setup-13.png" width="700"><img src="TreeRingShape_files/figure-html/setup-14.png" width="700"><img src="TreeRingShape_files/figure-html/setup-15.png" width="700"><img src="TreeRingShape_files/figure-html/setup-16.png" width="700"><img src="TreeRingShape_files/figure-html/setup-17.png" width="700"><img src="TreeRingShape_files/figure-html/setup-18.png" width="700"><img src="TreeRingShape_files/figure-html/setup-19.png" width="700"><img src="TreeRingShape_files/figure-html/setup-20.png" width="700"><img src="TreeRingShape_files/figure-html/setup-21.png" width="700"><img src="TreeRingShape_files/figure-html/setup-22.png" width="700"><img src="TreeRingShape_files/figure-html/setup-23.png" width="700"><img src="TreeRingShape_files/figure-html/setup-24.png" width="700"><img src="TreeRingShape_files/figure-html/setup-25.png" width="700"><img src="TreeRingShape_files/figure-html/setup-26.png" width="700"><img src="TreeRingShape_files/figure-html/setup-27.png" width="700"><img src="TreeRingShape_files/figure-html/setup-28.png" width="700"><img src="TreeRingShape_files/figure-html/setup-29.png" width="700"><img src="TreeRingShape_files/figure-html/setup-30.png" width="700"><img src="TreeRingShape_files/figure-html/setup-31.png" width="700"><img src="TreeRingShape_files/figure-html/setup-32.png" width="700"><img src="TreeRingShape_files/figure-html/setup-33.png" width="700"><img src="TreeRingShape_files/figure-html/setup-34.png" width="700"><img src="TreeRingShape_files/figure-html/setup-35.png" width="700"><img src="TreeRingShape_files/figure-html/setup-36.png" width="700"><img src="TreeRingShape_files/figure-html/setup-37.png" width="700"><img src="TreeRingShape_files/figure-html/setup-38.png" width="700"><img src="TreeRingShape_files/figure-html/setup-39.png" width="700"><img src="TreeRingShape_files/figure-html/setup-40.png" width="700"><img src="TreeRingShape_files/figure-html/setup-41.png" width="700"><img src="TreeRingShape_files/figure-html/setup-42.png" width="700"><img src="TreeRingShape_files/figure-html/setup-43.png" width="700"><img src="TreeRingShape_files/figure-html/setup-44.png" width="700"><img src="TreeRingShape_files/figure-html/setup-45.png" width="700"><img src="TreeRingShape_files/figure-html/setup-46.png" width="700"><img src="TreeRingShape_files/figure-html/setup-47.png" width="700"><img src="TreeRingShape_files/figure-html/setup-48.png" width="700"><img src="TreeRingShape_files/figure-html/setup-49.png" width="700"><img src="TreeRingShape_files/figure-html/setup-50.png" width="700"><img src="TreeRingShape_files/figure-html/setup-51.png" width="700"><img src="TreeRingShape_files/figure-html/setup-52.png" width="700"><img src="TreeRingShape_files/figure-html/setup-53.png" width="700"><img src="TreeRingShape_files/figure-html/setup-54.png" width="700"><img src="TreeRingShape_files/figure-html/setup-55.png" width="700"><img src="TreeRingShape_files/figure-html/setup-56.png" width="700"><img src="TreeRingShape_files/figure-html/setup-57.png" width="700"><img src="TreeRingShape_files/figure-html/setup-58.png" width="700"><img src="TreeRingShape_files/figure-html/setup-59.png" width="700"><img src="TreeRingShape_files/figure-html/setup-60.png" width="700"><img src="TreeRingShape_files/figure-html/setup-61.png" width="700"><img src="TreeRingShape_files/figure-html/setup-62.png" width="700"><img src="TreeRingShape_files/figure-html/setup-63.png" width="700"><img src="TreeRingShape_files/figure-html/setup-64.png" width="700"><img src="TreeRingShape_files/figure-html/setup-65.png" width="700"><img src="TreeRingShape_files/figure-html/setup-66.png" width="700"><img src="TreeRingShape_files/figure-html/setup-67.png" width="700"><img src="TreeRingShape_files/figure-html/setup-68.png" width="700"><img src="TreeRingShape_files/figure-html/setup-69.png" width="700"><img src="TreeRingShape_files/figure-html/setup-70.png" width="700"></p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">ya</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plot_year_RingArea.html">plot_year_RingArea</a></span><span class="op">(</span><span class="va">TR.</span><span class="op">@</span><span class="va">L2</span>, <span class="fl">2018</span><span class="op">)</span><span class="op">$</span><span class="va">Year_TreeRingArea</span></span></code></pre></div>
+<p><img src="TreeRingShape_files/figure-html/setup-71.png" width="700"><img src="TreeRingShape_files/figure-html/setup-72.png" width="700"></p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">ya</span>,type<span class="op">=</span><span class="st">'b'</span><span class="op">)</span></span>
+<span><span class="va">tri.</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/TreeRingIndex.html">TreeRingIndex</a></span><span class="op">(</span><span class="va">ya</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">tri.</span><span class="op">$</span><span class="va">spline</span>,col<span class="op">=</span><span class="st">'red'</span>,lw<span class="op">=</span><span class="fl">2</span><span class="op">)</span></span></code></pre></div>
+<p><img src="TreeRingShape_files/figure-html/setup-73.png" width="700"></p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">tri.</span><span class="op">$</span><span class="va">idx</span>,type<span class="op">=</span><span class="st">'b'</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>h<span class="op">=</span><span class="fl">1</span>,col<span class="op">=</span><span class="st">'red'</span><span class="op">)</span></span></code></pre></div>
+<p><img src="TreeRingShape_files/figure-html/setup-74.png" width="700"></p>
+</div>
+<div class="section level3">
+<h3 id="reference">Reference<a class="anchor" aria-label="anchor" href="#reference"></a>
+</h3>
+<p>Pebesma, E., &amp; Bivand, R. (2023). Spatial Data Science: With
+Applications in R. Chapman and Hall/CRC. <a href="https://doi.org/10.1201/9780429459016" class="external-link uri">https://doi.org/10.1201/9780429459016</a></p>
+<p>QGIS Development Team. (2024). QGIS Geographic Information System.
+QGIS Association. <a href="https://www.qgis.org" class="external-link uri">https://www.qgis.org</a></p>
+</div>
+</div>
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
