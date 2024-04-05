@@ -56,9 +56,11 @@ help(package = "TreeRingShape")
 browseVignettes("TreeRingShape")
 
 #devtools::build_vignettes("TreeRingShape")
-#usethis::use_vignette("TreeRingShape")
-#devtools::use-vignette("TreeRingFShape")
+#
 #devtools::build_rmd("vignettes/TreeRingShape.Rmd")
+
+# vinette ####
+usethis::use_vignette("TreeRingShape")
 
   # down sizing TR ####
   ## memory size ####
