@@ -7,7 +7,7 @@
 TreeRingsLines(TR)
 }
 \arguments{
-\item{TR}{is tree ring  class (classTreeRingShape )}
+\item{TR}{a tree ring  class (classTreeRingShape )}
 }
 \value{
 TR (TreeRing class TR@L<-L ; TR@L_<-L_ ; TR@YR_L <-YR_L ; TR@ln <- ln)
@@ -17,7 +17,7 @@ Read representative tree ring lines from shape files
 }
 \examples{
  \dontrun{
- setwd('../Abies_277_h400')
+ setwd('../Abies_277_h400') #set working directory with shape files
  TR <- TreeRingsLines(TR)
  }
 

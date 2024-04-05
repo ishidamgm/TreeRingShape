@@ -2,9 +2,9 @@
 
 #' Read TreeRingsPoints shape file, check and save parameters
 #'
-#' @param TR is tree ring  class (classTreeRingShape )
+#' @param TR a tree ring  class (classTreeRingShape )
 #'
-#' #@return list of  (P,P00,YR_P,n_id,YR_P,n_YR)
+#' #@return a list of  (P,P00,YR_P,n_id,YR_P,n_YR)
 #' @export
 #'
 #' @examples
@@ -62,7 +62,7 @@ TreeRingsPoints <- function(TR) {
 
 #' Read representative tree ring lines from shape files
 #'
-#' @param  TR is tree ring  class (classTreeRingShape )
+#' @param  TR a tree ring  class (classTreeRingShape )
 #'
 #' @return TR (TreeRing class TR@L<-L ; TR@L_<-L_ ; TR@YR_L <-YR_L ; TR@ln <- ln)
 #' @export
@@ -251,7 +251,9 @@ TreeRingsInterpolation <- function(TR) {
 #' @return generated new object from classTreeRingShape
 #' @export
 #'
+#'
 #' @examples
+#'
 #' \dontrun{
 #'
 #' # sample data enable to download from
@@ -267,7 +269,7 @@ TreeRingsInterpolation <- function(TR) {
 #'  TR.
 #'  slotNames(TR.)
 #'  str(TR.)
-#' ' Lplot(TR.@L2)
+#'  Lplot(TR.@L2)
 #'
 #' }
 #'

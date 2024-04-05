@@ -10,7 +10,7 @@ ReadShapefile_TreeRings(
 )
 }
 \arguments{
-\item{filename}{is a file name(path) of shape file written to disk.}
+\item{filename}{a file name(path) of shape file written to disk.}
 
 \item{ring.tag}{string, column name of ring years  (0 is cambium layer)}
 }

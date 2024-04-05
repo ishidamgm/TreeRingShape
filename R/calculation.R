@@ -144,7 +144,7 @@ seq.deg <- function(deg1,deg2,deg.by=1){
 #' rdst.<-rdst(TR@L,TR@P,73)
 #' plot(rdst.)
 #' spline<-smooth.spline(rdst.$rad,rdst.$rdst, spar =0.0002)
-#'　lines(predict(spline,seq(-pi,pi,0.01)),col="red")
+#' lines(predict(spline,seq(-pi,pi,0.01)),col="red")
 rdst <-function(L,P,yr){
   i<-which(P$yr==yr)
   x<-P$x[i] ; y<-P$y[i]
@@ -175,7 +175,7 @@ rdst <-function(L,P,yr){
 #' @param P data.frame (x,y,id,yr,r,deg) of radial tree ring points (TR@P)
 #' @param yr  integer of year
 #'
-#' @return is  a data frame with relative distance and center angle(degree)
+#' @return  a data frame with relative distance and center angle(degree)
 #' with mergine (-90 - 0 - 360 - 90)
 #' @export
 #'
@@ -184,9 +184,8 @@ rdst <-function(L,P,yr){
 #' rdst.<-rdst_MerginePlus(TR@L,TR@P,year.)
 #' plot(rdst.,xlim=c(-200,200),main=year.)
 #' spline<-smooth.spline(rdst.$deg,rdst.$rdst, spar =0.0002)
-#'　lines(predict(spline,seq(-202,220,1)),col="red")
-#'　
-#'　
+#' lines(predict(spline,seq(-202,220,1)),col="red")
+
 rdst_MerginePlus <- function(L,P,yr){ #,pi/2
   ddeg<-180
   df <- rdst(L,P,yr) #nrow(df)
@@ -210,7 +209,7 @@ rdst_MerginePlus <- function(L,P,yr){ #,pi/2
 
 #' Move the tree rings coordinates based on P00 (x,y movement coordinates).
 #'
-#' @param L is a list of tree rings(x,y coordinates).
+#' @param L  a list of tree rings(x,y coordinates).
 #' @param P00 x, y coordinates of a center point (usually a pith).
 #'
 #' @return moved L to center point 0,0
@@ -315,8 +314,8 @@ Lsort_all <- function(L){
 
 #' Return a vector of center angle 0 to 360(degree) for x y coordinate vector
 #'
-#' @param x is a vector of x coordinates
-#' @param y is a vector of y coordinates
+#' @param x  a vector of x coordinates
+#' @param y  a vector of y coordinates
 #'
 #' @return a vector of center angle 0 to 360(degree) for x y coordinate vector
 #' @examples

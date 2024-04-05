@@ -5,7 +5,6 @@
 #' @param L2 is as list of Tree ring polygons (X, Y)
 #' @param filename is a shape file(path) name written to disk.
 #'
-#' @return data of Shapefile
 #' @export
 #'
 #' @examples
@@ -34,9 +33,7 @@ WriteShapefile_TreeRings <- function(L2 , filename = "test.shp") {
 
 #'  Read a shape file of Tree Ring Points ( P : radial input and correction points)
 #'
-#' @param filename is a file name of Tree ring points (shape file )
-#' The extension (.shp) is unnecessary.
-#'
+#' @param filename  a file name of Tree ring points (shape file )
 #' @param   id.tag  string, column name of id (attribute table)
 #' @param ring.tag  string, column name of ring years  (0 is cambium layer)
 #'
@@ -98,7 +95,7 @@ ReadShapefile_P00 <- function(filename = "Abies_277_h400_TreeRing_Points.shp", i
 
 #' Read Shapefile_TreeRings
 #'
-#' @param filename is a file name(path) of shape file written to disk.
+#' @param filename a file name(path) of shape file written to disk.
 #'
 #' @param ring.tag string, column name of ring years  (0 is cambium layer)
 #'

@@ -37,7 +37,7 @@ Initial setting of  a new classTreeRingShape (TR)
 (wd. <- getwd())
 setwd('../Abies_277_h400')
 dir()
-TR.<-InitialSettings_classTreeRingShape(
+TR.<-new_classTreeRingShape(
 P_filename='Abies_277_h400_TreeRing_Points.shp',
 L_filename='Abies_277_h400_TreeRing_Representative.shp',
 L2_filename='Abies_277_h400_TreeRing.shp',

@@ -51,7 +51,8 @@ methods::setClass("classTreeRingShape",
 # TR ####
 #' A sample object of class TreeRingShape
 #'
-#' This data set contains tree ring shape data for Abies_277_h400 sampled from Tateyama, central Japan.
+#' The data set contains tree ring shape data for Abies_277_h400 sampled from Tateyama, central Japan.
+#' Its disk image and shape files can be download from  https://www.sanchikanri.com/treering/Abies_277_h400.zip
 #' It's intended to demonstrate the structure and use of `TreeRingShape` class objects within the package.
 #'
 #' @name TR
@@ -82,7 +83,7 @@ methods::setClass("classTreeRingShape",
 #' (wd. <- getwd())
 #' setwd('../Abies_277_h400')
 #' dir()
-#' TR.<-InitialSettings_classTreeRingShape(
+#' TR.<-new_classTreeRingShape(
 #' P_filename='Abies_277_h400_TreeRing_Points.shp',
 #' L_filename='Abies_277_h400_TreeRing_Representative.shp',
 #' L2_filename='Abies_277_h400_TreeRing.shp',

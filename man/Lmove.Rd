@@ -7,7 +7,7 @@
 Lmove(L, P00 = P00)
 }
 \arguments{
-\item{L}{is a list of tree rings(x,y coordinates).}
+\item{L}{a list of tree rings(x,y coordinates).}
 
 \item{P00}{x, y coordinates of a center point (usually a pith).}
 }

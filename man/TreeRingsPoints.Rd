@@ -7,16 +7,16 @@
 TreeRingsPoints(TR)
 }
 \arguments{
-\item{TR}{is tree ring  class (classTreeRingShape )
+\item{TR}{a tree ring  class (classTreeRingShape )
 
-#@return list of  (P,P00,YR_P,n_id,YR_P,n_YR)}
+#@return a list of  (P,P00,YR_P,n_id,YR_P,n_YR)}
 }
 \description{
 Read TreeRingsPoints shape file, check and save parameters
 }
 \examples{
 \dontrun{
-P_filename<-'points277_h600'　#####shape file name (without extention 'abc.shp' -> 'abc')
-TreeRingsPoints(TR)
+ setwd('../Abies_277_h400') #set working directory with shape files
+ TreeRingsPoints(TR)
 #' }
 }

@@ -20,7 +20,7 @@ Lplot <- function(L, rn = 1:length(L), col = "red", ...) {
 
 #' Draw a graphics of tree rings by 1 ring (3*3 in a screen)
 #'
-#' @param L is a list of tree rings polygon coordinates (X,Y)
+#' @param L  a list of tree rings polygon coordinates (X,Y)
 #' @param i.ring integer vector, tree ring number for drawing
 #' @param nrow  par(mfrow=c(nrow,ncol))
 #' @param ncol  par(mfrow=c(nrow,ncol))

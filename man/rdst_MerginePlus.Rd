@@ -14,7 +14,7 @@ rdst_MerginePlus(L, P, yr)
 \item{yr}{integer of year}
 }
 \value{
-is  a data frame with relative distance and center angle(degree)
+a data frame with relative distance and center angle(degree)
 with mergine (-90 - 0 - 360 - 90)
 }
 \description{
@@ -25,7 +25,5 @@ year.<-73
 rdst.<-rdst_MerginePlus(TR@L,TR@P,year.)
 plot(rdst.,xlim=c(-200,200),main=year.)
 spline<-smooth.spline(rdst.$deg,rdst.$rdst, spar =0.0002)
-　lines(predict(spline,seq(-202,220,1)),col="red")
-　
-　
+lines(predict(spline,seq(-202,220,1)),col="red")
 }

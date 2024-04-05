@@ -24,5 +24,5 @@ Return relative distance between two representative tree rings
 rdst.<-rdst(TR@L,TR@P,73)
 plot(rdst.)
 spline<-smooth.spline(rdst.$rad,rdst.$rdst, spar =0.0002)
-　lines(predict(spline,seq(-pi,pi,0.01)),col="red")
+lines(predict(spline,seq(-pi,pi,0.01)),col="red")
 }

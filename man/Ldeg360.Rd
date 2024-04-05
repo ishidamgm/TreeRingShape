@@ -7,9 +7,9 @@
 Ldeg360(x, y)
 }
 \arguments{
-\item{x}{is a vector of x coordinates}
+\item{x}{a vector of x coordinates}
 
-\item{y}{is a vector of y coordinates}
+\item{y}{a vector of y coordinates}
 }
 \value{
 a vector of center angle 0 to 360(degree) for x y coordinate vector

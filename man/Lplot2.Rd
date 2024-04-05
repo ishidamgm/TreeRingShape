@@ -7,7 +7,7 @@
 Lplot2(L, i.ring = 1:length(L), nrow = 3, ncol = 3, ask = "FALSE", ...)
 }
 \arguments{
-\item{L}{is a list of tree rings polygon coordinates (X,Y)}
+\item{L}{a list of tree rings polygon coordinates (X,Y)}
 
 \item{i.ring}{integer vector, tree ring number for drawing}
 

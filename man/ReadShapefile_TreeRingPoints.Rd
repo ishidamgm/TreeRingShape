@@ -11,8 +11,7 @@ ReadShapefile_TreeRingPoints(
 )
 }
 \arguments{
-\item{filename}{is a file name of Tree ring points (shape file )
-The extension (.shp) is unnecessary.}
+\item{filename}{a file name of Tree ring points (shape file )}
 
 \item{id.tag}{string, column name of id (attribute table)}
 
