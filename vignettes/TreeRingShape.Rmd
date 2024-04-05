@@ -1,24 +1,10 @@
 ---
 title: "TreeRingShape"
-author: "Megumi ISHIDA"
-date: "`r Sys.Date()`"
-# output: 
-#   html_document:
-#     toc: true
-#     toc_float: true
-#     collapsed: false
-#      number_sections: true
-#     includes:
-#     in_header: header.html
-      
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{TreeRingShape}
-  %\VignetteEncoding{UTF-8}
   %\VignetteEngine{knitr::rmarkdown}
-editor_options: 
-  markdown: 
-    wrap: 72
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, include = FALSE}
@@ -27,40 +13,7 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
-<link rel="icon" href="../docs/favicon.png" />
 
-This package is designed for efficiently recording the shape of all
-annual rings in a tree trunk cross-section. It **interpolates the annual
-rings (L2)** between **representative annual ring lines (L)** from the
-**annual ring points (P)** and **representative annual ring lines**
-inputted on radii measured in GIS software (Qgis). A **"representative
-annual ring"** refers to the annual rings that characterize the shape of
-the outer circumference and the cross-section of the disc, requiring
-fewer rings the closer their shape is to a perfect circle. Although
-annual rings grow concentrically around the pith, their shape is not
-perfectly circular. Traditionally, dendrochronology and tree-ring
-analysis have evaluated tree growth based on the width of the annual
-rings. However, with the advancement of image analysis technologies,
-there has been an increasing number of studies evaluating growth based
-on the area of the annual rings. Most of these studies have focused on
-conifer plantation samples, where the annual rings are clearly defined.
-However, this package also enables the recording of annual ring shapes
-in trees from natural forests, where the ring shapes are more complex.
-It should be noted, however, that currently, information regarding the
-shape of the annual rings needs to be manually inputted, which can be
-labor-intensive.
-
-\*\* see also \*\*
-<https://www.sanchikanri.com/treering/TreeRingShape.html>
-
-
-
-
-### Reference
-
-Pebesma, E., & Bivand, R. (2023). Spatial Data Science: With
-Applications in R. Chapman and Hall/CRC.
-<https://doi.org/10.1201/9780429459016>
-
-QGIS Development Team. (2024). QGIS Geographic Information System. QGIS
-Association. <https://www.qgis.org>
+```{r setup}
+library(TreeRingShape)
+```
