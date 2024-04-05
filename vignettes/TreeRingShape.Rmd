@@ -53,7 +53,6 @@ labor-intensive.
 \*\* see also \*\*
 <https://www.sanchikanri.com/treering/TreeRingShape.html>
 
-![Qgis\>\>\>R](Qgis2R.jpg)
 
 
 
