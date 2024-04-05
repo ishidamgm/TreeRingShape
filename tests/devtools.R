@@ -10,7 +10,7 @@ detach("package:TreeRingShape", unload = TRUE)
 dir(.libPaths()[1],"TreeRingShape")
 devtools::uninstall(".")
 dir(.libPaths()[1],"TreeRingShape")
-install_github("ishidamgm/TreeRingShape")
+devtools::install_github("ishidamgm/TreeRingShape")
 library(TreeRingShape)
 help(package = "TreeRingShape")
 browseVignettes("TreeRingShape")
@@ -49,10 +49,6 @@ devtools::revdep()      #character(0)
 # install_github("ishidamgm/TreeRingShape")
 
 
-
-
-
-
 #devtools::install()
 devtools::install(build_vignettes = TRUE)
 library(TreeRingShape)
@@ -63,17 +59,6 @@ browseVignettes("TreeRingShape")
 #usethis::use_vignette("TreeRingShape")
 #devtools::use-vignette("TreeRingFShape")
 #devtools::build_rmd("vignettes/TreeRingShape.Rmd")
-
-
-
-
-
-
-
-
-
-
-
 
   # down sizing TR ####
   ## memory size ####
