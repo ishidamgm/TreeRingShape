@@ -1,10 +1,24 @@
 ---
 title: "TreeRingShape"
+author: "Megumi ISHIDA"
+date: "`r Sys.Date()`"
+# output: 
+#   html_document:
+#     toc: true
+#     toc_float: true
+#     collapsed: false
+#      number_sections: true
+#     includes:
+#     in_header: header.html
+      
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{TreeRingShape}
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 ```{r, include = FALSE}
@@ -13,6 +27,7 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
+<link rel="icon" href="../docs/favicon.png" />
 
 This package is designed for efficiently recording the shape of all
 annual rings in a tree trunk cross-section. It **interpolates the annual
@@ -162,7 +177,6 @@ abline(h=1,col='red')
 
 Pebesma, E., & Bivand, R. (2023). Spatial Data Science: With
 Applications in R. Chapman and Hall/CRC.
-<https://doi.org/10.1201/9780429459016>
 
 QGIS Development Team. (2024). QGIS Geographic Information System. QGIS
-Association. <https://www.qgis.org>
+Association. <https://www.qgis.org/en/site/>
