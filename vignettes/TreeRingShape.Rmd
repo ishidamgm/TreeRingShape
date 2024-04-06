@@ -50,8 +50,6 @@ It should be noted, however, that currently, information regarding the
 shape of the annual rings needs to be manually inputted, which can be
 labor-intensive.
 
-\*\* see also \*\*
-<https://www.sanchikanri.com/treering/TreeRingShape.html>
 
 ![Qgis\>\>\>R](Qgis2R.jpg)
 
@@ -140,8 +138,7 @@ ring shape data.
 
 ### Usage
 
-\*\* sample data of 'Abies_277_h400' can be download from \*\*
-<https://www.sanchikanri.com/treering/Abies_277_h400.zip>
+<https://www.sanchikanri.com/treering/TreeRingShape.html>
 
 
 ### Reference

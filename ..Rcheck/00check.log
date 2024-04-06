@@ -1,4 +1,4 @@
-* using log directory ‘/home/i/8T/Dropbox/00D/00/ring/TreeRingShape/..Rcheck’
+* using log directory ‘/home/i/d/Dropbox/00D/00/ring/TreeRingShape/..Rcheck’
 * using R version 4.3.3 (2024-02-29)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * R was compiled by
@@ -11,7 +11,7 @@
 * checking extension type ... Package
 * this is package ‘TreeRingShape’ version ‘3.0.1’
 * package encoding: UTF-8
-* checking CRAN incoming feasibility ... [2s/14s] NOTE
+* checking CRAN incoming feasibility ... [5s/16s] NOTE
 Maintainer: ‘Megumi ISHIDA <ishidam@sanchikanri.com>’
 
 New submission
@@ -26,10 +26,8 @@ The build time stamp is missing.
 * checking for executable files ... OK
 * checking for hidden files and directories ... NOTE
 Found the following hidden files and directories:
-  .Rhistory
   .github/.gitignore
   .gitignore
-  vignettes/.Rhistory
   vignettes/.gitignore
   ..Rcheck
   .Rproj.user
@@ -42,18 +40,7 @@ CRAN-pack does not know about
   ..Rcheck
   .git
   .github
-* checking for portable file names ... WARNING
-Found the following files with non-portable file names:
-  .Rproj.user/673E97E7/pcs/windowlayoutstate (MSI の競合コピー 2024-04-03).pper
-  .Rproj.user/673E97E7/pcs/workbench-pane (MSI の競合コピー 2024-04-03).pper
-  .Rproj.user/shared/notebooks/paths (MSI の競合コピー 2024-04-06)
-  .Rproj.user/shared/notebooks/paths (vaio の競合コピー 2024-04-02)
-  .Rproj.user/shared/notebooks/paths (vaio の競合コピー 2024-04-06)
-  .git/logs/HEAD (vaio の競合コピー 2024-04-02)
-  .git/logs/refs/remotes/origin/main (MSI の競合コピー 2024-04-03)
-  .git/logs/refs/remotes/origin/master (MSI の競合コピー 2024-04-03)
-These are not fully portable file names.
-See section ‘Package structure’ in the ‘Writing R Extensions’ manual.
+* checking for portable file names ... OK
 * checking for sufficient/correct file permissions ... OK
 * checking whether package ‘TreeRingShape’ can be installed ... OK
 * checking installed package size ... OK
@@ -114,13 +101,4 @@ Files in the 'vignettes' directory but no files in 'inst/doc':
 Directory 'inst/doc' does not exist.
 Package vignette without corresponding single PDF/HTML:
   ‘TreeRingShape.Rmd’
-* checking re-building of vignette outputs ... OK
-* checking PDF version of manual ... WARNING
-LaTeX errors when creating PDF version.
-This typically indicates Rd problems.
-* checking PDF version of manual without index ... ERROR
-* checking HTML version of manual ... OK
-* checking for non-standard things in the check directory ... OK
-* checking for detritus in the temp directory ... OK
-* DONE
-Status: 1 ERROR, 5 WARNINGs, 4 NOTEs
+* checking re-building of vignette outputs ...
