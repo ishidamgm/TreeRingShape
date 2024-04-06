@@ -1,8 +1,7 @@
-inst/doc
-.Rproj.user
+/.Rproj.user
 tools/
-.Rhistory
+/.Rhistory
 docs
 /doc/
 /Meta/
-..Rcheck
+//..Rcheck
