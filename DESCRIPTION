@@ -3,7 +3,7 @@ Type: Package
 Title: Recording Tree-Ring Shapes of Tree Disks with Manual Digitizing and Interpolating Model
 Version: 1.0.0
 Authors@R: c(
-  person("Megumi", "Ishida", email = "ishidam@sanchikanri.com", 
+  person("Megumi", "ISHIDA", email = "ishidam@sanchikanri.com", 
          role = c("aut", "cph", "cre"), 
          comment = c(ORCID = "0000-0003-0978-5388")))
 Maintainer: Megumi ISHIDA <ishidam@sanchikanri.com>
