@@ -122,7 +122,6 @@ TreeRingsLines <- function(TR) {
 #'
 #' @examples
 #' slotNames(TR)
-#' # help("classTreeRingShape-class",package="TreeRingShape")
 #' TR <- TreeRingsInterpolation(TR)
 #' ya <- plot_year_RingArea(TR@L2, 2018)$Year_TreeRingArea
 #' plot(ya,type='b')
