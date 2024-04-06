@@ -6,6 +6,7 @@ Authors@R: c(
   person("Megumi", "ISHIDA", email = "ishidam@sanchikanri.com", 
          role = c("aut", "cph", "cre"), 
          comment = c(ORCID = "0000-0003-0978-5388")))
+Maintainer: Megumi ISHIDA <ishidam@sanchikanri.com>
 Description: Record all tree-ring Shapefile of tree disk with GIS soft ('Qgis') and interpolating model from high resolution tree disk image. 
 License: GPL (>= 2)
 Depends: 
