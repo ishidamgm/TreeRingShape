@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head><title>R: Recording Tree-Ring Shapes of Tree Disks with Manual Digitizing
+and Interpolating Model</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+<h1> Recording Tree-Ring Shapes of Tree Disks with Manual Digitizing
+and Interpolating Model
+<img class="toplogo" src="../../../doc/html/Rlogo.svg" alt="[R logo]" />
+</h1>
+<hr/>
+<div style="text-align: center;">
+<a href="../../../doc/html/packages.html"><img class="arrow" src="../../../doc/html/left.jpg" alt="[Up]" /></a>
+<a href="../../../doc/html/index.html"><img class="arrow" src="../../../doc/html/up.jpg" alt="[Top]" /></a>
+</div><h2>Documentation for package &lsquo;TreeRingShape&rsquo; version 3.0.1</h2>
+
+<ul><li><a href="../DESCRIPTION">DESCRIPTION file</a>.</li>
+<li><a href="../NEWS">Package NEWS</a>.</li>
+</ul>
+
+<h2>Help Pages</h2>
+
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="area.html">area</a></td>
+<td>Return a area from polygon xy coordinates</td></tr>
+<tr><td style="width: 25%;"><a href="circumference.html">circumference</a></td>
+<td>Return circumference length of polygon line</td></tr>
+<tr><td style="width: 25%;"><a href="classTreeRingShape-class.html">classTreeRingShape-class</a></td>
+<td>class of TreeRingShape</td></tr>
+<tr><td style="width: 25%;"><a href="degree.html">degree</a></td>
+<td>Constant for conversion from degree to radian ####</td></tr>
+<tr><td style="width: 25%;"><a href="dst.html">dst</a></td>
+<td>Return a vector of distances from original a point (0,0) from a matrix or data frame of xy coordinates</td></tr>
+<tr><td style="width: 25%;"><a href="dstpp.html">dstpp</a></td>
+<td>Return vector for distance between adjacent two points</td></tr>
+<tr><td style="width: 25%;"><a href="Ldeg360.html">Ldeg360</a></td>
+<td>Return a vector of center angle 0 to 360(degree) for x y coordinate vector</td></tr>
+<tr><td style="width: 25%;"><a href="Llist2dataframe.html">Llist2dataframe</a></td>
+<td>Convert from a list of tree rings polygons (L) to data frame to a data frame with no.,year,x,y,r(radius),radian(center angle),degree. The data frame is sorted by degree(0 to 360).</td></tr>
+<tr><td style="width: 25%;"><a href="Lmove.html">Lmove</a></td>
+<td>Move the tree rings coordinates based on P00 (x,y movement coordinates).</td></tr>
+<tr><td style="width: 25%;"><a href="Lplot.html">Lplot</a></td>
+<td>Plot a graphics of tree rings</td></tr>
+<tr><td style="width: 25%;"><a href="Lplot2.html">Lplot2</a></td>
+<td>Draw a graphics of tree rings by 1 ring (3*3 in a screen)</td></tr>
+<tr><td style="width: 25%;"><a href="Lrad.plot.html">Lrad.plot</a></td>
+<td>Check center angle of points to input order</td></tr>
+<tr><td style="width: 25%;"><a href="Lrn.html">Lrn</a></td>
+<td>Return a ring number of tree ring polygons list (L) from year</td></tr>
+<tr><td style="width: 25%;"><a href="Lsort.html">Lsort</a></td>
+<td>Sort x,y coordinates of a tree ring line with center angle of each point</td></tr>
+<tr><td style="width: 25%;"><a href="Lsort_all.html">Lsort_all</a></td>
+<td>Sort x,y coordinates of tree ring lines with center angle of each point apply Lsort to list of tree ring lines</td></tr>
+<tr><td style="width: 25%;"><a href="new_classTreeRingShape.html">new_classTreeRingShape</a></td>
+<td>Initial setting of a new classTreeRingShape (TR)</td></tr>
+<tr><td style="width: 25%;"><a href="nstP.html">nstP</a></td>
+<td>Return a vector of row numbers of points that have nearest center angle</td></tr>
+<tr><td style="width: 25%;"><a href="plot_TreeRing.html">plot_TreeRing</a></td>
+<td>Draw a plot of tree rings This function draws Tree rings of a disk from x, y list(x,y) with name of year.</td></tr>
+<tr><td style="width: 25%;"><a href="plot_TreeRings_df.html">plot_TreeRings_df</a></td>
+<td>Plot tree rings from data fame This function draws Tree rings of a disk from data frame(x,y,year).</td></tr>
+<tr><td style="width: 25%;"><a href="plot_TreeRing_df.html">plot_TreeRing_df</a></td>
+<td>plot_TreeRing_df Draw a Tree ring of a disk from data frame(x,y,year)</td></tr>
+<tr><td style="width: 25%;"><a href="plot_year_RingArea.html">plot_year_RingArea</a></td>
+<td>Plot and return data frame of year_disk area and year_Tree ring area</td></tr>
+<tr><td style="width: 25%;"><a href="rdst.html">rdst</a></td>
+<td>Return relative distance between two representative tree rings</td></tr>
+<tr><td style="width: 25%;"><a href="rdst_MerginePlus.html">rdst_MerginePlus</a></td>
+<td>Return relative distance between two representative tree rings</td></tr>
+<tr><td style="width: 25%;"><a href="ReadShapefile_P00.html">ReadShapefile_P00</a></td>
+<td>Return x,y coordinates of a tree ring center point (P00) from shape file of tree ring points</td></tr>
+<tr><td style="width: 25%;"><a href="ReadShapefile_TreeRingPoints.html">ReadShapefile_TreeRingPoints</a></td>
+<td>Read a shape file of Tree Ring Points ( P : radial input and correction points)</td></tr>
+<tr><td style="width: 25%;"><a href="ReadShapefile_TreeRings.html">ReadShapefile_TreeRings</a></td>
+<td>Read Shapefile_TreeRings</td></tr>
+<tr><td style="width: 25%;"><a href="seq_deg.html">seq_deg</a></td>
+<td>Return a vector of sequence of angles between start and end angle 0 to pi -pi to 0</td></tr>
+<tr><td style="width: 25%;"><a href="TR.html">TR</a></td>
+<td>A sample object of class TreeRingShape</td></tr>
+<tr><td style="width: 25%;"><a href="TreeRingIndex.html">TreeRingIndex</a></td>
+<td>Calculate tree ring index from chronosequence data (year,growth)</td></tr>
+<tr><td style="width: 25%;"><a href="TreeRingShape.html">TreeRingShape</a></td>
+<td>Construct a object (TR) of classTreeRingShape</td></tr>
+<tr><td style="width: 25%;"><a href="TreeRingsInterpolation.html">TreeRingsInterpolation</a></td>
+<td>Interpolates tree ring between representative (manual input) tree rings with tree ring points</td></tr>
+<tr><td style="width: 25%;"><a href="TreeRingsLines.html">TreeRingsLines</a></td>
+<td>Read representative tree ring lines from shape files</td></tr>
+<tr><td style="width: 25%;"><a href="TreeRingsPoints.html">TreeRingsPoints</a></td>
+<td>Read TreeRingsPoints shape file, check and save parameters</td></tr>
+<tr><td style="width: 25%;"><a href="WriteShapefile_TreeRings.html">WriteShapefile_TreeRings</a></td>
+<td>Write a shapefile of interpolated tree rings</td></tr>
+</table>
+</div></body></html>

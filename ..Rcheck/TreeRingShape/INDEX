@@ -1,0 +1,72 @@
+Ldeg360                 Return a vector of center angle 0 to
+                        360(degree) for x y coordinate vector
+Llist2dataframe         Convert from a list of tree rings polygons (L)
+                        to data frame to a data frame with
+                        no.,year,x,y,r(radius),radian(center
+                        angle),degree. The data frame is sorted by
+                        degree(0 to 360).
+Lmove                   Move the tree rings coordinates based on P00
+                        (x,y movement coordinates).
+Lplot                   Plot a graphics of tree rings
+Lplot2                  Draw a graphics of tree rings by 1 ring (3*3 in
+                        a screen)
+Lrad.plot               Check center angle of points to input order
+Lrn                     Return a ring number of tree ring polygons list
+                        (L) from year
+Lsort                   Sort x,y coordinates of a tree ring line with
+                        center angle of each point
+Lsort_all               Sort x,y coordinates of tree ring lines with
+                        center angle of each point apply Lsort to list
+                        of tree ring lines
+ReadShapefile_P00       Return x,y coordinates of a tree ring center
+                        point (P00) from shape file of tree ring points
+ReadShapefile_TreeRingPoints
+                        Read a shape file of Tree Ring Points ( P :
+                        radial input and correction points)
+ReadShapefile_TreeRings
+                        Read Shapefile_TreeRings
+TR                      A sample object of class TreeRingShape
+TreeRingIndex           Calculate tree ring index from chronosequence
+                        data (year,growth)
+TreeRingShape           Construct a object (TR) of classTreeRingShape
+TreeRingsInterpolation
+                        Interpolates tree ring between representative
+                        (manual input) tree rings with tree ring points
+TreeRingsLines          Read representative tree ring lines from shape
+                        files
+TreeRingsPoints         Read TreeRingsPoints shape file, check and save
+                        parameters
+WriteShapefile_TreeRings
+                        Write a shapefile of interpolated tree rings
+area                    Return a area from polygon xy coordinates
+circumference           Return circumference length of polygon line
+classTreeRingShape-class
+                        class of TreeRingShape
+degree                  Constant for conversion from degree to radian
+                        ####
+dst                     Return a vector of distances from original a
+                        point (0,0) from a matrix or data frame of xy
+                        coordinates
+dstpp                   Return vector for distance between adjacent two
+                        points
+new_classTreeRingShape
+                        Initial setting of a new classTreeRingShape
+                        (TR)
+nstP                    Return a vector of row numbers of points that
+                        have nearest center angle
+plot_TreeRing           Draw a plot of tree rings This function draws
+                        Tree rings of a disk from x, y list(x,y) with
+                        name of year.
+plot_TreeRing_df        plot_TreeRing_df Draw a Tree ring of a disk
+                        from data frame(x,y,year)
+plot_TreeRings_df       Plot tree rings from data fame This function
+                        draws Tree rings of a disk from data
+                        frame(x,y,year).
+plot_year_RingArea      Plot and return data frame of year_disk area
+                        and year_Tree ring area
+rdst                    Return relative distance between two
+                        representative tree rings
+rdst_MerginePlus        Return relative distance between two
+                        representative tree rings
+seq_deg                 Return a vector of sequence of angles between
+                        start and end angle 0 to pi -pi to 0
