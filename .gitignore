@@ -3,3 +3,6 @@ inst/doc
 tools/
 .Rhistory
 docs
+/doc/
+/Meta/
+..Rcheck
