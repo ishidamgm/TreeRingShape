@@ -120,9 +120,9 @@ nstP<-function(z1,z2){
 #' @export
 #'
 #' @examples
-#' seq.deg(170,-170,.5)
+#' seq_deg(170,-170,.5)
 #'
-seq.deg <- function(deg1,deg2,deg.by=1){
+seq_deg <- function(deg1,deg2,deg.by=1){
   if((deg1<=0 & deg2<=0) | (deg1>=0 & deg2>=0))return(seq(deg1,deg2,deg.by))
   if(deg1>=0 & deg2<=0) return(c(seq(deg1,180,deg.by),seq(-180,deg2,deg.by)))
   if(deg1<=0 & deg2>=0) return(c(seq(deg1,0,deg.by),seq(0,deg2,deg.by)))
