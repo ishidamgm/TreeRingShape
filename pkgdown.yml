@@ -3,7 +3,7 @@ pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   TreeRingShape: TreeRingShape.html
-last_built: 2024-04-06T04:10Z
+last_built: 2024-04-06T04:17Z
 urls:
   reference: https://ishidamgm.github.io/TreeRingShape/reference
   article: https://ishidamgm.github.io/TreeRingShape/articles
