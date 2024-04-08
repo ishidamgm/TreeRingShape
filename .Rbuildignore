@@ -12,5 +12,10 @@
 ^doc$
 ^Meta$
 
-^.Rproj.user/
-^.git/
+^\.github/\.gitignore$
+^\.gitignore$
+^vignettes/\.gitignore$
+^\.Rproj\.user$
+^\.git$
+^\.github$
+^.*\\.Rcheck$

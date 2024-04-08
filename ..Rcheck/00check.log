@@ -1,4 +1,4 @@
-* using log directory ‘/home/i/d/Dropbox/00D/00/ring/TreeRingShape/..Rcheck’
+* using log directory ‘/home/i/8T/Dropbox/00D/00/ring/TreeRingShape/..Rcheck’
 * using R version 4.3.3 (2024-02-29)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * R was compiled by
@@ -11,7 +11,7 @@
 * checking extension type ... Package
 * this is package ‘TreeRingShape’ version ‘3.0.1’
 * package encoding: UTF-8
-* checking CRAN incoming feasibility ... [5s/16s] NOTE
+* checking CRAN incoming feasibility ... [2s/15s] NOTE
 Maintainer: ‘Megumi ISHIDA <ishidam@sanchikanri.com>’
 
 New submission
@@ -26,6 +26,7 @@ The build time stamp is missing.
 * checking for executable files ... OK
 * checking for hidden files and directories ... NOTE
 Found the following hidden files and directories:
+  .Rhistory
   .github/.gitignore
   .gitignore
   vignettes/.gitignore
@@ -49,10 +50,9 @@ CRAN-pack does not know about
 * checking DESCRIPTION meta-information ... NOTE
 Checking should be performed on sources prepared by ‘R CMD build’.
 * checking top-level files ... NOTE
-Files ‘README.md’ or ‘NEWS.md’ cannot be checked without ‘pandoc’ being installed.
 Non-standard files/directories found at top level:
-  ‘CRAN-SUBMISSION’ ‘Meta’ ‘TreeRingShape.Rproj’ ‘_pkgdown.yml’
-  ‘cran-comments.md’ ‘data-raw’ ‘doc’ ‘docs’
+  ‘CRAN-SUBMISSION’ ‘Meta’ ‘TreeRingShape.Rproj’
+  ‘cran-comments.md’ ‘data-raw’
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... WARNING
@@ -89,16 +89,12 @@ These should not be in a package tarball.
 * checking data for non-ASCII characters ... OK
 * checking LazyData ... OK
 * checking data for ASCII and uncompressed saves ... OK
-* checking files in ‘vignettes’ ... WARNING
-Files in the 'vignettes' directory but no files in 'inst/doc':
-  ‘Qgis2R.jpg’ ‘TreeRingShape.R’ ‘TreeRingShape.Rmd’
+* checking installed files from ‘inst/doc’ ... OK
+* checking files in ‘vignettes’ ... OK
 * checking examples ... OK
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
   Running ‘testthat.R’
 * checking for unstated dependencies in vignettes ... OK
-* checking package vignettes in ‘inst/doc’ ... WARNING
-Directory 'inst/doc' does not exist.
-Package vignette without corresponding single PDF/HTML:
-  ‘TreeRingShape.Rmd’
+* checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ...
