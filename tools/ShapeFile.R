@@ -5,12 +5,13 @@
 #' @param L2 is as list of Tree ring polygons (X, Y)
 #' @param filename is a shape file(path) name written to disk.
 #'
+#' @return data of Shapefile
 #' @export
 #'
 #' @examples
 #'
 #' \donttest{#'
-#' WriteShapefile_TreeRings (TR@L, tempfile("TreeRingShape_test",fileext = ".shp"))
+#' WriteShapefile_TreeRings (TR@L2, tempfile("TreeRingShape_test",fileext = ".shp"))
 #' dir(tempdir())
 #' }
 
@@ -24,16 +25,18 @@ WriteShapefile_TreeRings <- function(L2 , filename = "test.shp") {
   }
   L2.Table <- data.frame(Id = 0:(yn. - 1), ring = yr.)
   # sf:: ######
-  L2.sf<-sf::st_sfc(sapply(L2,sf::st_linestring))
-  L2.sf<-sf::st_sf(L2.sf,L2.Table)
-  sf::st_write(L2.sf,filename)
+  L2.sf<-st_sfc(sapply(L2,st_linestring))
+  L2.sf<-st_sf(L2.sf,L2.Table)
+  st_write(L2.sf,filename)
   #return(L2.sf)
 }
 
 
 #'  Read a shape file of Tree Ring Points ( P : radial input and correction points)
 #'
-#' @param filename  a file name of Tree ring points (shape file )
+#' @param filename is a file name of Tree ring points (shape file )
+#' The extension (.shp) is unnecessary.
+#'
 #' @param   id.tag  string, column name of id (attribute table)
 #' @param ring.tag  string, column name of ring years  (0 is cambium layer)
 #'
@@ -41,14 +44,17 @@ WriteShapefile_TreeRings <- function(L2 , filename = "test.shp") {
 #' @export
 #'
 #' @examples
+#'\donttest{
 #'
-#' .dir <- system.file("shp",package = "TreeRingShape")
-#' .file <- "Abies_277_h400_TreeRing_Points.shp"
-#' filename <- paste(.dir,.file,sep="/")
-#' sf.P<-sf::st_read(filename)
-#' plot(sf.P)
-#' ReadShapefile_TreeRingPoints(filename,id.tag='id',ring.tag='ring')
+#' # sample data of 'Abies_277_h400' can be download from
+#' #https://www.sanchikanri.com/treering/Abies_277_h400.zip
+#'
+#' file.path <- '../Abies_277_h400/Abies_277_h400_TreeRing_Points.shp'
+#' ReadShapefile_TreeRingPoints(file.path,id.tag='id',ring.tag='ring')
+#'
+#' }
 
+#'
 ReadShapefile_TreeRingPoints <- function(filename = "Abies_277_h400_TreeRing_Points.shp", id.tag = "id", ring.tag = "ring") {
   d <- sf::read_sf(filename)
   xy <- sf::st_coordinates(d)
@@ -75,10 +81,12 @@ ReadShapefile_TreeRingPoints <- function(filename = "Abies_277_h400_TreeRing_Poi
 #' @export
 #'
 #' @examples
-#' .dir <- system.file("shp",package = "TreeRingShape")
-#' .file <- "Abies_277_h400_TreeRing_Points.shp"
-#' filename <- paste(.dir,.file,sep="/")
+#' # This example NOT be run examples
+#' \donttest{
+#' # read a original point P00 ####
+#' filename <- '../Abies_277_h400/Abies_277_h400_TreeRing_Points.shp'
 #' ReadShapefile_P00(filename)
+#'}
 ReadShapefile_P00 <- function(filename = "Abies_277_h400_TreeRing_Points.shp", id.tag = "id", ring.tag = "ring") {
   d <- ReadShapefile_TreeRingPoints(filename, id.tag, ring.tag)
   i <- which(d$id == 0)
@@ -90,7 +98,7 @@ ReadShapefile_P00 <- function(filename = "Abies_277_h400_TreeRing_Points.shp", i
 
 #' Read Shapefile_TreeRings
 #'
-#' @param filename a file name(path) of shape file written to disk.
+#' @param filename is a file name(path) of shape file written to disk.
 #'
 #' @param ring.tag string, column name of ring years  (0 is cambium layer)
 #'
@@ -98,12 +106,10 @@ ReadShapefile_P00 <- function(filename = "Abies_277_h400_TreeRing_Points.shp", i
 #' @export
 #'
 #' @examples
-#' .dir <- system.file("shp",package = "TreeRingShape")
-#' .file <- "Abies_277_h400_TreeRing_Representative.shp"
-#' filename <- paste(.dir,.file,sep="/")
-#' sf.L<-sf::st_read(filename)
-#' plot(sf.L)
+#'\donttest{
+#' filename <- '../Abies_277_h400/Abies_277_h400_TreeRing_Representative.shp'
 #' Lplot(ReadShapefile_TreeRings(filename))
+#'}
 #'
 ReadShapefile_TreeRings <- function(filename = "Abies_277_h400_TreeRing_Representative.shp", ring.tag = "ring") {
   d <- sf::read_sf(filename)
@@ -113,7 +119,7 @@ ReadShapefile_TreeRings <- function(filename = "Abies_277_h400_TreeRing_Represen
   jjj <- order(ring)
   ln <- nrow(d)
   L <- c()
-  xy <- sf::st_coordinates(d)
+  xy <- st_coordinates(d)
   for (i in 1:ln) {
     L <- c(L, list(xy[xy[,3]==jjj[i],c(1,2)]) ) #### from data frame to list
   }

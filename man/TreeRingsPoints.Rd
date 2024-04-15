@@ -15,8 +15,13 @@ TreeRingsPoints(TR)
 Read TreeRingsPoints shape file, check and save parameters
 }
 \examples{
-\dontrun{
- setwd('../Abies_277_h400') #set working directory with shape files
- TreeRingsPoints(TR)
-#' }
+ #  didectory of tree ring shapefiles
+ .dir <- system.file("shp",package = "TreeRingShape")
+
+# path of  P_filename
+.file <- "Abies_277_h400_TreeRing_Points.shp"
+ TR_@P_filename <- paste(.dir,.file,sep="/")
+
+  TreeRingsPoints(TR_)@P
+
 }

@@ -130,10 +130,8 @@ plot_TreeRing_df <- function(df , year = 0, year_label = "yr") {
 #'
 #'@seealso \code{\link{TreeRingsInterpolation}}
 #'
-#' @examples
-#' \dontrun{
-#' plot_year_RingArea(TR@L2,2018)
-#' }
+
+
 plot_year_RingArea <- function(L2, yr_end = 2018) {
   a <- rev(sapply(L2, area))
   yr_a <- (yr_end - length(a) + 1):yr_end
@@ -168,15 +166,7 @@ plot_year_RingArea <- function(L2, yr_end = 2018) {
 #'
 #'@seealso \code{\link{TreeRingsInterpolation}}
 #'
-#' @examples
-#' \dontrun{
-#' ya <- plot_year_RingArea(TR@L2, 2018)$Year_TreeRingArea
-#' plot(ya,type='b')
-#' tri. <- TreeRingIndex(ya)
-#' lines(tri.$spline,col='red',lw=2)
-#' plot(tri.$idx,type='b')
-#' abline(h=1,col='red')
-#' }
+
 
 TreeRingIndex <- function(ya, spar = 0.8) {
   sm <- stats::smooth.spline(ya, spar = spar)

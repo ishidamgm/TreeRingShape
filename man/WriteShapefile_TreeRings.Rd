@@ -16,8 +16,8 @@ Write a shapefile of interpolated tree rings
 }
 \examples{
 
-\dontrun{#'
-WriteShapefile_TreeRings (TR@L2, tempfile("TreeRingShape_test",fileext = ".shp"))
+\donttest{#'
+WriteShapefile_TreeRings (TR@L, tempfile("TreeRingShape_test",fileext = ".shp"))
 dir(tempdir())
 }
 }

@@ -4,7 +4,7 @@ This **R** package is designed for efficiently recording the shape of all
 annual rings in a tree trunk cross-section. It **interpolates the annual
 rings (L2)** between **representative annual ring lines (L)** from the
 **annual ring points (P)** and **representative annual ring lines**
-inputted on radii measured in GIS software (Qgis). A **"representative
+inputted on radii measured in GIS software ('Qgis'). A **"representative
 annual ring"** refers to the annual rings that characterize the shape of
 the outer circumference and the cross-section of the disc, requiring
 fewer rings the closer their shape is to a perfect circle. Although

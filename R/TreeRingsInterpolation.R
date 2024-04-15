@@ -8,10 +8,16 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#'  setwd('../Abies_277_h400') #set working directory with shape files
-#'  TreeRingsPoints(TR)
-#' #' }
+#'  #  didectory of tree ring shapefiles
+#'  .dir <- system.file("shp",package = "TreeRingShape")
+#'
+#' # path of  P_filename
+#' .file <- "Abies_277_h400_TreeRing_Points.shp"
+#'  TR_@P_filename <- paste(.dir,.file,sep="/")
+#'
+#'   TreeRingsPoints(TR_)@P
+#'
+
 
 
 TreeRingsPoints <- function(TR) {
@@ -68,10 +74,20 @@ TreeRingsPoints <- function(TR) {
 #' @export
 #'
 #' @examples
-#'  \dontrun{
-#'  setwd('../Abies_277_h400') #set working directory with shape files
-#'  TR <- TreeRingsLines(TR)
-#'  }
+#'  #  didectory of tree ring shapefiles
+#'  .dir <- system.file("shp",package = "TreeRingShape")
+#'
+#' # path of  P_filename
+#' .file <- "Abies_277_h400_TreeRing_Points.shp"
+#'  TR_@P_filename <- paste(.dir,.file,sep="/")
+#'
+#'   TreeRingsPoints(TR_)@P
+#'
+#' # path of L_file name
+#' .file <- "Abies_277_h400_TreeRing_Representative.shp"
+#' L_filename <- paste(.dir,.file,sep="/")
+#'  TreeRingsPoints(TR_)@L
+#'  Lplot(TR@L)
 #'
 TreeRingsLines <- function(TR) {
   P <- TR@P
@@ -121,12 +137,14 @@ TreeRingsLines <- function(TR) {
 #' @export
 #'
 #' @examples
-#' slotNames(TR)
+#' # tree ring interpolation (add TR@L2 to classTreeRingShape )
 #' TR <- TreeRingsInterpolation(TR)
 #' ya <- plot_year_RingArea(TR@L2, 2018)$Year_TreeRingArea
+#' # Figure of relationships year and tree ring area
 #' plot(ya,type='b')
 #' tri. <- TreeRingIndex(ya)
 #' lines(tri.$spline,col='red',lw=2)
+#' # Figure of relationships year and tree ring index
 #' plot(tri.$idx,type='b')
 #' abline(h=1,col='red')
 #'
@@ -253,11 +271,12 @@ TreeRingsInterpolation <- function(TR) {
 #'
 #' @examples
 #'
-#' \dontrun{
 #'
-#' # sample data enable to download from
-#' # https://www.sanchikanri.com/treering/Abies_277_h400.zip
-#' setwd('../Abies_277_h400') #set working directory with shape files
+#' test_TreeRingShape <- function(){
+#' oldwd <- getwd()
+#' on.exit(setwd(oldwd))
+#' setwd(system.file("shp",package = "TreeRingShape"))
+#'
 #' TR.<-TreeRingShape(
 #' P_filename='Abies_277_h400_TreeRing_Points.shp',
 #' L_filename='Abies_277_h400_TreeRing_Representative.shp',
@@ -272,7 +291,9 @@ TreeRingsInterpolation <- function(TR) {
 #'
 #' }
 #'
+#'  test_TreeRingShape()
 #'
+
 TreeRingShape <- function(P_filename, L_filename, L2_filename, P_id.tag = "id", P_ring.tag = "ring", L_ring.tag = "ring") {
 
   # generate new TR object from classTreeRingShape

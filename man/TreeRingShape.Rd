@@ -34,11 +34,12 @@ Construct a object (TR) of classTreeRingShape
 }
 \examples{
 
-\dontrun{
 
-# sample data enable to download from
-# https://www.sanchikanri.com/treering/Abies_277_h400.zip
-setwd('../Abies_277_h400') #set working directory with shape files
+test_TreeRingShape <- function(){
+oldwd <- getwd()
+on.exit(setwd(oldwd))
+setwd(system.file("shp",package = "TreeRingShape"))
+
 TR.<-TreeRingShape(
 P_filename='Abies_277_h400_TreeRing_Points.shp',
 L_filename='Abies_277_h400_TreeRing_Representative.shp',
@@ -53,5 +54,6 @@ L_ring.tag='ring')
 
 }
 
+ test_TreeRingShape()
 
 }

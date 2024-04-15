@@ -1,7 +1,8 @@
-.Rproj.user
-tools/
-.Rhistory/
-docs
+^tools$
+^\.Rhistory$
+^docs$
 /doc/
 /Meta/
-..Rcheck/
+^.*\\.Rcheck$
+^\.Rproj\.user$
+.Rproj.user

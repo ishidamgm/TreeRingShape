@@ -16,9 +16,19 @@ TR (TreeRing class TR@L<-L ; TR@L_<-L_ ; TR@YR_L <-YR_L ; TR@ln <- ln)
 Read representative tree ring lines from shape files
 }
 \examples{
- \dontrun{
- setwd('../Abies_277_h400') #set working directory with shape files
- TR <- TreeRingsLines(TR)
- }
+ #  didectory of tree ring shapefiles
+ .dir <- system.file("shp",package = "TreeRingShape")
+
+# path of  P_filename
+.file <- "Abies_277_h400_TreeRing_Points.shp"
+ TR_@P_filename <- paste(.dir,.file,sep="/")
+
+  TreeRingsPoints(TR_)@P
+
+# path of L_file name
+.file <- "Abies_277_h400_TreeRing_Representative.shp"
+L_filename <- paste(.dir,.file,sep="/")
+ TreeRingsPoints(TR_)@L
+ Lplot(TR@L)
 
 }

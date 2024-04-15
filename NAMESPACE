@@ -4,3 +4,4 @@ importFrom("graphics", "abline", "lines", "par", "points", "segments")
     importFrom("utils", "head", "str", "tail")
 
 exportPattern("^[[:alpha:]]+")
+

@@ -16,12 +16,14 @@ TR  object  of classTreeRingShape (with tree ring interpolated)
 Interpolates tree ring between representative (manual input) tree rings with tree ring points
 }
 \examples{
-slotNames(TR)
+# tree ring interpolation (add TR@L2 to classTreeRingShape )
 TR <- TreeRingsInterpolation(TR)
 ya <- plot_year_RingArea(TR@L2, 2018)$Year_TreeRingArea
+# Figure of relationships year and tree ring area
 plot(ya,type='b')
 tri. <- TreeRingIndex(ya)
 lines(tri.$spline,col='red',lw=2)
+# Figure of relationships year and tree ring index
 plot(tri.$idx,type='b')
 abline(h=1,col='red')
 

@@ -1,10 +1,11 @@
 Package: TreeRingShape
 Type: Package
 Title: Recording Tree-Ring Shapes of Tree Disks with Manual Digitizing and Interpolating Model
-Version: 3.0.1
-Author: Megumi ISHIDA [aut, cre, cph] (<ishidam@sanchikanri.com>)
+Version: 3.0.2
+Authors@R: c(person("Megumi", "Ishida",role =c("aut","cre","cph"), email="ishidam@sanchikanri.com"))
+Author: Megumi ISHIDA
 Maintainer: Megumi ISHIDA <ishidam@sanchikanri.com>
-Description: Record all tree-ring Shapefile of tree disk with GIS soft ('Qgis') and interpolating model from high resolution tree disk image. 
+Description: Record all tree-ring Shapefile of tree disk with GIS soft ('Qgis'<https://www.qgis.org>) and interpolating model from high resolution tree disk image. 
 License: GPL (>= 2)
 Depends: 
     R (>= 3.6.2)

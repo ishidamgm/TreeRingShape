@@ -26,7 +26,6 @@
 #'  TR.
 #'  slotNames(TR.)
 #'  str(TR.)
-
 methods::setClass("classTreeRingShape",
          slots = c(P_filename = "character",
                    P_id.tag = "character",
@@ -65,10 +64,27 @@ methods::setClass("classTreeRingShape",
 #' Lplot(TR@L)
 "TR"
 
+# TR_ ####
+#' A sample object of class TreeRingShape, shapefile paths and column names only.
+#'
+#' The full data set contains tree ring shape data for Abies_277_h400 sampled from Tateyama, central Japan.
+#' Its disk image and shape files can be download from  https://www.sanchikanri.com/treering/Abies_277_h400.zip
+#' @name TR_
+#' @export
+#' @examples
+#' # Access basic information about the TreeRingShape object
+#' TR_<-new_classTreeRingShape(
+#' P_filename='Abies_277_h400_TreeRing_Points.shp',
+#' L_filename='Abies_277_h400_TreeRing_Representative.shp',
+#' L2_filename='Abies_277_h400_TreeRing.shp',
+#' P_id.tag='id',
+#' P_ring.tag='ring',
+#' L_ring.tag='ring')
+#' slotNames(TR_)
+#' str(TR_)
+"TR_"
+
 #' Initial setting of  a new classTreeRingShape (TR)
-#'
-#'
-#'
 #' @param P_filename   file name of shape file (P) for tree ring points
 #' @param L_filename   file name of shape file (L) for tree ring lines
 #' @param L2_filename  file name of shape file (L2) for tree ring lines interpolated
@@ -79,11 +95,7 @@ methods::setClass("classTreeRingShape",
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' (wd. <- getwd())
-#' setwd('../Abies_277_h400')
-#' dir()
-#' TR.<-new_classTreeRingShape(
+#' TR_<-new_classTreeRingShape(
 #' P_filename='Abies_277_h400_TreeRing_Points.shp',
 #' L_filename='Abies_277_h400_TreeRing_Representative.shp',
 #' L2_filename='Abies_277_h400_TreeRing.shp',
@@ -91,11 +103,10 @@ methods::setClass("classTreeRingShape",
 #' P_ring.tag='ring',
 #' L_ring.tag='ring')
 #'
-#'  TR.
-#'  slotNames(TR.)
-#'  str(TR.)
+#'  TR_
+#'  slotNames(TR_)
+#'  str(TR_)
 #'
-#' }
 #'
 #'
 new_classTreeRingShape <- function(P_filename, L_filename, L2_filename,

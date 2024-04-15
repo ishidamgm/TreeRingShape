@@ -17,11 +17,6 @@ list of Year_DiskArea and Year_TreeRingArea
 \description{
 Plot and return data frame of  year_disk area and year_Tree ring area
 }
-\examples{
-\dontrun{
-plot_year_RingArea(TR@L2,2018)
-}
-}
 \seealso{
 \code{\link{TreeRingsInterpolation}}
 }

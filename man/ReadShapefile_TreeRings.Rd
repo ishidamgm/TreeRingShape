@@ -21,9 +21,11 @@ a list of tree ring lines
 Read Shapefile_TreeRings
 }
 \examples{
-\dontrun{
-filename <- '../Abies_277_h400/Abies_277_h400_TreeRing_Representative.shp'
+.dir <- system.file("shp",package = "TreeRingShape")
+.file <- "Abies_277_h400_TreeRing_Representative.shp"
+filename <- paste(.dir,.file,sep="/")
+sf.L<-sf::st_read(filename)
+plot(sf.L)
 Lplot(ReadShapefile_TreeRings(filename))
-}
 
 }

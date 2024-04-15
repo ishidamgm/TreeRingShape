@@ -24,10 +24,8 @@ numeric : x,y coordinates of a tree ring center point (P00)
 Return x,y coordinates of a tree ring center point (P00) from shape file of tree ring points
 }
 \examples{
-# This example NOT be run examples
-\dontrun{
-# read a original point P00 ####
-filename <- '../Abies_277_h400/Abies_277_h400_TreeRing_Points.shp'
+.dir <- system.file("shp",package = "TreeRingShape")
+.file <- "Abies_277_h400_TreeRing_Points.shp"
+filename <- paste(.dir,.file,sep="/")
 ReadShapefile_P00(filename)
-}
 }
