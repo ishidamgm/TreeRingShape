@@ -27,7 +27,7 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
-<link rel="icon" href="../docs/favicon.png" />
+
 
 This package is designed for efficiently recording the shape of all
 annual rings in a tree trunk cross-section. It **interpolates the annual
@@ -59,6 +59,8 @@ The TreeRingShape() function establishes the S4 class classTreeRingShape
 and executes the interpolation of annual rings to complete the annual
 ring shape data.
 
+
+
 #### Table 1. classTreeRingShape : TR \<- TreeRingShape()
 
 | Slot         | R                                                                    | Qgis                         |
@@ -76,7 +78,9 @@ ring shape data.
 | L2_filename  | file name of shape file (L2) for tree ring lines interpolated        | \*.shp                       |
 | **etc.**     | see **classTreeRingShape** for details                               |                              |
 
-
+ **Flow of making whole tree ring shapes **   
+TreeRingShape() includs the prosedure from new_classTreeRingShape() to TreeRingInterpolation()
+<img src="TreeRingShape_flowchart.png" align="right" width ="300"/>
 
 ## Procedures
 
@@ -135,6 +139,8 @@ ring shape data.
         tracing the lines of annual rings that characterize the shape of
         the outer circumference and the disc. The count starts from the
         cambium layer as zero and goes inward.
+
+
 
 ### Usage
 

@@ -27,7 +27,8 @@ devtools::build_manual()   ## pdf manual ####
 
 # build and install package with vignettes !!! ####
 devtools::build(binary = TRUE,vignettes = TRUE,manual = TRUE)
-devtools::install_github("ishidamgm/TreeRingShape", build_vignettes = TRUE,force=T)
+#devtools::install_github("ishidamgm/TreeRingShape", build_vignettes = TRUE,force=T)
+devtools::install(build_vignettes = TRUE)
 devtools::install(build_vignettes = TRUE)
 library(TreeRingShape)
 help(package = "TreeRingShape")
@@ -112,7 +113,7 @@ browseVignettes("TreeRingShape")
 #devtools::build_rmd("vignettes/TreeRingShape.Rmd")
 
 # vinette ####
-usethis::use_vignette("TreeRingShape")
+#usethis::use_vignette("TreeRingShape")
 
 devtools::build_vignettes()
 
