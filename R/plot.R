@@ -8,6 +8,7 @@
 #' @param col color of plot
 #' @param ... other parameters to be passed through to plotting functions
 #' @export
+#' @return No return value, only draw tree ring plot.
 #'
 #' @examples
 #'
@@ -28,7 +29,7 @@ Lplot <- function(L, rn = 1:length(L), col = "red", ...) {
 #' @param ... other parameters to be passed through to plotting functions.
 #'
 #' @export
-#'
+#' @return No return value, only draw tree ring plot.
 #' @examples
 #' Lplot2(TR@L,i.ring=1:9, nrow=1,ncol=1,type='b')
 #' Lplot2(TR@L,type='b')
@@ -43,17 +44,20 @@ Lplot2 <- function(L, i.ring = 1:length(L), nrow = 3, ncol = 3, ask = "FALSE", .
 #'
 #' @param L list of tree rings
 #' @param i.ring integer vector, tree ring number for drawing
+#' @param nrow  par(mfrow=c(nrow,ncol))
+#' @param ncol  par(mfrow=c(nrow,ncol))
 #'
 #' @export
-#'
+#' @return No return value, only draw tree ring plot.
 #' @examples
 #' slotNames(TR)
 #' Lplot(TR@L)
 #' str(TR@L)
 #' Lrad.plot(TR@L,11:19)
 #'
-Lrad.plot <- function(L, i.ring = 1:9) {
-  par(mfrow = c(3, 3))
+Lrad.plot <- function(L, i.ring = 1:4,nrow=2,ncol=2) {
+  oldpar <- par(no.readonly = TRUE);   on.exit(par(oldpar))
+  par(mfrow = c(nrow, ncol))
   for (i in i.ring) {
     x <- L[[i]][, 1]
     y <- L[[i]][, 2]
@@ -61,7 +65,6 @@ Lrad.plot <- function(L, i.ring = 1:9) {
     plot(rad, main = paste(i, ":", names(L)[i], "year"), ylim = c(-pi - 0.1, pi + 0.1))
     abline(h = c(-pi, 0, pi), col = "red")
   }
-  par(mfrow = c(1, 1))
 }
 
 #' Draw a plot of tree rings
@@ -71,7 +74,7 @@ Lrad.plot <- function(L, i.ring = 1:9) {
 #' @param ... other parameters to be passed through to plotting functions
 #'
 #' @export
-#'
+#' @return No return value, only draw tree ring plot.
 #' @examples
 #' names(TR@L)
 #' plot_TreeRing(TR@L)
@@ -90,7 +93,7 @@ plot_TreeRing <- function(L , year = 0, ...) {   #= TR@L
 #' @param year_label name of  column of Tree ring year (0(cambium),1,2,....,n(pith))
 #'
 #' @export
-#'
+#' @return No return value, only draw tree ring plot.
 #' @seealso \code{\link{Llist2dataframe}}  for the data frame
 #'
 #' @examples
@@ -111,7 +114,7 @@ plot_TreeRings_df <- function(df , year_label = "yr") {
 #' @param year_label name of  column of Tree ring year (0(cambium),1,2,....,n(pith))
 #'
 #' @export
-#'
+#' @return No return value, only draw tree ring plot.
 #' @examples
 #' TR@L_ <- Llist2dataframe(TR@L)     # data frame of tree rings
 #' plot_TreeRing_df(TR@L_, year =1)

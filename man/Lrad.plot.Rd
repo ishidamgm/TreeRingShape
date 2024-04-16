@@ -4,12 +4,19 @@
 \alias{Lrad.plot}
 \title{Check center angle of points to input order}
 \usage{
-Lrad.plot(L, i.ring = 1:9)
+Lrad.plot(L, i.ring = 1:4, nrow = 2, ncol = 2)
 }
 \arguments{
 \item{L}{list of tree rings}
 
 \item{i.ring}{integer vector, tree ring number for drawing}
+
+\item{nrow}{par(mfrow=c(nrow,ncol))}
+
+\item{ncol}{par(mfrow=c(nrow,ncol))}
+}
+\value{
+No return value, only draw tree ring plot.
 }
 \description{
 Check center angle of points to input order

@@ -14,6 +14,9 @@ plot_TreeRing_df(df, year = 0, year_label = "yr")
 
 \item{year_label}{name of  column of Tree ring year (0(cambium),1,2,....,n(pith))}
 }
+\value{
+No return value, only draw tree ring plot.
+}
 \description{
 plot_TreeRing_df
 Draw a Tree ring of a disk from data frame(x,y,year)

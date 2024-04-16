@@ -15,6 +15,9 @@ Lplot(L, rn = 1:length(L), col = "red", ...)
 
 \item{...}{other parameters to be passed through to plotting functions}
 }
+\value{
+No return value, only draw tree ring plot.
+}
 \description{
 Plot a graphics of tree rings
 }

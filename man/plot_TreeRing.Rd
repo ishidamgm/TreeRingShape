@@ -14,6 +14,9 @@ plot_TreeRing(L, year = 0, ...)
 
 \item{...}{other parameters to be passed through to plotting functions}
 }
+\value{
+No return value, only draw tree ring plot.
+}
 \description{
 Draw a plot of tree rings
 This function draws Tree rings of a disk from x, y list(x,y) with name of year.

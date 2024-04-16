@@ -19,6 +19,9 @@ Lplot2(L, i.ring = 1:length(L), nrow = 3, ncol = 3, ask = "FALSE", ...)
 
 \item{...}{other parameters to be passed through to plotting functions.}
 }
+\value{
+No return value, only draw tree ring plot.
+}
 \description{
 Draw a graphics of tree rings by 1 ring (3*3 in a screen)
 }
