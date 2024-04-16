@@ -51,12 +51,25 @@
     </div>
 
     <div class="section level2">
+<h2 class="page-header" data-toc-text="3.0.2" id="treeringshape-302">TreeRingShape 3.0.2<a class="anchor" aria-label="anchor" href="#treeringshape-302"></a></h2>
+<ul><li>Added <a href="mailto:Authors@R" class="email">Authors@R</a> field in DESCRIPTION file.</li>
+<li>Wrote package names in single quotes , as GIS soft (‘Qgis’<a href="https://www.qgis.org" class="external-link uri">https://www.qgis.org</a>)</li>
+<li>Added \value to following function Lplot.Rd, Lplot2.Rd, Lrad.plot.Rd, plot_TreeRing_df.Rd, plot_TreeRing.Rd, plot_TreeRings_df.Rd, TreeRingsPoints.Rd, WriteShapefile_TreeRings.Rd \value ⇒　** #’ <a href="https://github.com/return" class="external-link">@return</a> No return value, only draw tree ring plot. **</li>
+<li>Added sample Shapefiles in inst/shp</li>
+<li>All dontrun{} were deleted, and capable of execute with sample Shapefiles in inst/shp</li>
+<li>A donttest{} was used in WriteShapefile_TreeRings ()</li>
+<li>Reset user’s options()　<br>
+“oldpar &lt;- par(no.readonly = TRUE); on.exit(par(oldpar)) “ were included in Lplot2() and Lrad.plot()</li>
+<li>Reset user’s working directory “oldwd &lt;- getwd() ; on.exit(setwd(oldwd)) “ was used in a Example function of TreeRingShape().</li>
+</ul></div>
+    <div class="section level2">
 <h2 class="page-header" data-toc-text="3.0.1" id="treeringshape-301">TreeRingShape 3.0.1<a class="anchor" aria-label="anchor" href="#treeringshape-301"></a></h2>
 <ul><li>correct from ‘seq.deg()’ to ‘seq_deg()’ as s4 generic</li>
 </ul></div>
     <div class="section level2">
 <h2 class="page-header" data-toc-text="3.0.0" id="treeringshape-300">TreeRingShape 3.0.0<a class="anchor" aria-label="anchor" href="#treeringshape-300"></a></h2>
-<ul><li>Initial release of TreeRingShape</li>
+<ul><li>Initial comitment.</li>
+<li>It was supposed to be 0.1.0, but I made a mistake and ended up with 3.0.0. Please note that this is in the early stages of development.</li>
 </ul></div>
   </div>
 
