@@ -138,7 +138,9 @@ TreeRingsLines <- function(TR) {
 #'
 #' @examples
 #' # tree ring interpolation (add TR@L2 to classTreeRingShape )
+#' TR@L2   ### empty
 #' TR <- TreeRingsInterpolation(TR)
+#' TR@L2  ###  entered
 #' ya <- plot_year_RingArea(TR@L2, 2018)$Year_TreeRingArea
 #' # Figure of relationships year and tree ring area
 #' plot(ya,type='b')
@@ -284,7 +286,6 @@ TreeRingsInterpolation <- function(TR) {
 #' P_id.tag='id',P_ring.tag='ring',
 #' L_ring.tag='ring')
 #'
-#'  TR.
 #'  slotNames(TR.)
 #'  str(TR.)
 #'  Lplot(TR.@L2)

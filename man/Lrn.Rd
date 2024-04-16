@@ -18,6 +18,6 @@ a ring number of tree ring polygons list (L)
 Return a ring number of tree ring polygons list (L) from year
 }
 \examples{
-Lrn(TR@L,8)  # 8 is the formation year (from outermost) of the tree ring
+Lrn(TR@L,168)  # 168 is the formation year (from outermost) of the tree ring
 
 }

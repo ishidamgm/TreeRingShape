@@ -262,7 +262,7 @@ Llist2dataframe <-function(L){
 #' @export
 #'
 #' @examples
-#' Lrn(TR@L,8)  # 8 is the formation year (from outermost) of the tree ring
+#' Lrn(TR@L,168)  # 168 is the formation year (from outermost) of the tree ring
 #'
 Lrn <- function(L,yr){
   return(which(names(L)==yr))

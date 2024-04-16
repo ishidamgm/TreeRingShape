@@ -47,7 +47,6 @@ L2_filename='Abies_277_h400_TreeRing.shp',
 P_id.tag='id',P_ring.tag='ring',
 L_ring.tag='ring')
 
- TR.
  slotNames(TR.)
  str(TR.)
  Lplot(TR.@L2)

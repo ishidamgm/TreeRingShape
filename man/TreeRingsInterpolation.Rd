@@ -17,7 +17,9 @@ Interpolates tree ring between representative (manual input) tree rings with tre
 }
 \examples{
 # tree ring interpolation (add TR@L2 to classTreeRingShape )
+TR@L2   ### empty
 TR <- TreeRingsInterpolation(TR)
+TR@L2  ###  entered
 ya <- plot_year_RingArea(TR@L2, 2018)$Year_TreeRingArea
 # Figure of relationships year and tree ring area
 plot(ya,type='b')

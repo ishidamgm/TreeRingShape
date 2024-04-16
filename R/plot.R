@@ -33,10 +33,10 @@ Lplot <- function(L, rn = 1:length(L), col = "red", ...) {
 #' Lplot2(TR@L,i.ring=1:9, nrow=1,ncol=1,type='b')
 #' Lplot2(TR@L,type='b')
 Lplot2 <- function(L, i.ring = 1:length(L), nrow = 3, ncol = 3, ask = "FALSE", ...) {
+  oldpar <- par(no.readonly = TRUE)
+  on.exit(par(oldpar))
   par(mfrow = c(nrow, ncol))
   for (i in i.ring) plot(L[[i]], main = paste(i, ":", names(L)[i], "yr"), ...)
-  par(mfrow = c(1, 1))
-
 }
 
 #' Check center angle of points to input order
