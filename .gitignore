@@ -3,6 +3,6 @@ tools
 docs
 /doc/
 /Meta/
-..Rcheck
+..Rcheck/
 .Rproj.user
 

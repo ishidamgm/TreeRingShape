@@ -1,6 +1,6 @@
 # TreeRingShape 3.0.2
 * Added Authors@R field in  DESCRIPTION file.
-* Wrote package names in single quotes , as GIS soft ('Qgis'<https://www.qgis.org>)
+* Wrote package names in single quotes , as GIS soft ('Qgis'<https://www.qgis.org/en/site/>)
 * Added  \\value to following function
        Lplot.Rd, Lplot2.Rd, Lrad.plot.Rd, plot_TreeRing_df.Rd, plot_TreeRing.Rd,
   plot_TreeRings_df.Rd, TreeRingsPoints.Rd, WriteShapefile_TreeRings.Rd

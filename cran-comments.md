@@ -15,7 +15,11 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 0 note
+0 errors | 0 warnings | 1 note
+
+New submission
+* checking CRAN incoming feasibility ... [2s/13s] NOTE
+Maintainer: ‘Megumi ISHIDA <ishidam@sanchikanri.com>’
 
 ## Reverse dependencies
 
