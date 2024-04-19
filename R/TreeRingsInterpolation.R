@@ -4,7 +4,7 @@
 #'
 #' @param TR a tree ring  class (classTreeRingShape )
 #'
-#' #@return a list of  (P,P00,YR_P,n_id,YR_P,n_YR)
+#' @return a list of  (P,P00,YR_P,n_id,YR_P,n_YR)
 #' @export
 #'
 #' @examples

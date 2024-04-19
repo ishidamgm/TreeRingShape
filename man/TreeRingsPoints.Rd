@@ -7,9 +7,10 @@
 TreeRingsPoints(TR)
 }
 \arguments{
-\item{TR}{a tree ring  class (classTreeRingShape )
-
-#@return a list of  (P,P00,YR_P,n_id,YR_P,n_YR)}
+\item{TR}{a tree ring  class (classTreeRingShape )}
+}
+\value{
+a list of  (P,P00,YR_P,n_id,YR_P,n_YR)
 }
 \description{
 Read TreeRingsPoints shape file, check and save parameters

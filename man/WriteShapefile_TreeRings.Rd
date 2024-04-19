@@ -11,6 +11,9 @@ WriteShapefile_TreeRings(L2, filename = "test.shp")
 
 \item{filename}{is a shape file(path) name written to disk.}
 }
+\value{
+No return value, called for side effects.
+}
 \description{
 Write a shapefile of interpolated tree rings
 }

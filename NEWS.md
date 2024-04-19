@@ -1,3 +1,7 @@
+# TreeRingShape 3.0.3
+* Added  \\value to following function
+ TreeRingsPoints.Rd,  WriteShapefile_TreeRings.Rd: \value 
+     
 # TreeRingShape 3.0.2
 * Added Authors@R field in  DESCRIPTION file.
 * Wrote package names in single quotes , as GIS soft ('Qgis'<https://www.qgis.org/en/site/>)

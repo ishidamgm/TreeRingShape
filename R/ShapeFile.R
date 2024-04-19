@@ -5,6 +5,7 @@
 #' @param L2 is as list of Tree ring polygons (X, Y)
 #' @param filename is a shape file(path) name written to disk.
 #'
+#' @return No return value, called for side effects.
 #' @export
 #'
 #' @examples
