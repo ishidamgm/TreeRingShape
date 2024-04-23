@@ -1,4 +1,7 @@
-# TreeRingShape 3.0.3
+# TreeRingShape 3.0.4 
+* URL: "https://cran.r-project.org/web/packages/TreeRingShape/index.html" added in DESCRIPTION.
+
+# TreeRingShape 3.0.3 (published on CRAN 2024/04/23)
 * Added  \\value to following function
  TreeRingsPoints.Rd,  WriteShapefile_TreeRings.Rd: \value 
      
