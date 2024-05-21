@@ -1,5 +1,7 @@
 # TreeRingShape 3.0.4 
 * URL: "https://cran.r-project.org/web/packages/TreeRingShape/index.html" added in DESCRIPTION.
+* Corrected code of circumference() 
+* Added DiskInfo() 
 
 # TreeRingShape 3.0.3 (published on CRAN 2024/04/23)
 * Added  \\value to following function
@@ -24,5 +26,5 @@
 * correct from 'seq.deg()' to 'seq_deg()' as s4 generic 
 
 # TreeRingShape 3.0.0
-* Initial comitment. 
+* Initial commitment. 
 * It was supposed to be 0.1.0, but I made a mistake and ended up with 3.0.0. Please note that this is in the early stages of development.

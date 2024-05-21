@@ -319,3 +319,47 @@ TreeRingShape <- function(P_filename, L_filename, L2_filename, P_id.tag = "id", 
   return(TR)
 
 }
+
+#'  Return information for tree disk analysed from  TreeRingShape class
+#'
+#' @param TR. class of TreeRingShape
+#' @param dpi Resolution of tree disk image
+#'
+#' @return data frame of information for tree disk analysed
+#' @export
+#'
+#' @examples
+#' DiskInfo(TR.)
+#'
+#'
+DiskInfo <- function(TR.,dpi=1200){
+  #dpi <- 1200      # resolution of tree disk image
+  mm <-25.4/dpi
+  Width_mm <- round((max(TR.@L_$x)-min(TR.@L_$x))*mm)   # diameter of tree disk (x)
+  Height_mm <- round((max(TR.@L_$y)-min(TR.@L_$y))*mm )  # diameter of tree disk (y)
+  Girth_mm <- round( circumference(TR.@L[[1]]*mm))
+  L2_n <- TR.@n_YR   # 186
+  L_n  <- TR.@ln     #  38
+  L_points_n <- nrow(TR.@L_) # 17810 : Total number of tree ring lines inputed
+  L_total_length_mm <- sum(sapply(TR.@L,circumference))*mm
+  Mean_distance_between_L_points_mm <- L_total_length/L_points_N
+  P_points_total_n <- nrow(TR.@P)  # 3773
+  P_points_radial_n <- 8*N_L2  # 3773
+  P_points_partial_n <- N_P_points_total-N_P_points_radial   # 3773
+  df<-data.frame(Width_mm,
+                 Height_mm,
+                 Girth_mm,
+                 L2_n,
+                 L_n,
+                 L_points_n,
+                 L_total_length_mm,
+                 Mean_distance_between_L_points_mm,
+                 P_points_total_n,
+                 P_points_radial_n,
+                 P_points_partial_n)
+
+  df <- t(data.frame(df))
+  colnames(df)[1]<-TR.@L2_filename
+  return(df)
+
+}

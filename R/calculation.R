@@ -18,7 +18,7 @@ degree<-pi/180  # degree :
 #' circumference(l.)
 circumference <- function(l.){
   l.2<-rbind(l.[-1,],l.[1,])
-  len<-sum(rowSums((l.-l.2)^2))
+  len<-sum(sqrt(rowSums((l.-l.2)^2)))
   return(len)
 }
 
