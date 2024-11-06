@@ -4,17 +4,18 @@ Title: Recording Tree-Ring Shapes of Tree Disks with Manual Digitizing and Inter
 Version: 3.0.4
 Authors@R: c(person("Megumi", "ISHIDA",role =c("aut","cre","cph"), email="ishidam@sanchikanri.com"))
 Maintainer: Megumi ISHIDA <ishidam@sanchikanri.com>
-Description: Record all tree-ring Shapefile of tree disk with GIS soft ('Qgis'<https://www.qgis.org/en/site/>) and interpolating model from high resolution tree disk image. 
+Description: Record all tree-ring Shapefile of tree disk with GIS soft ('Qgis'<https://www.qgis.org/en/site/>) and interpolating model from high resolution tree disk image.
 License: GPL (>= 2)
-Depends: 
+Depends:
     R (>= 3.6.2)
 Imports:
     methods,
     sf
-Suggests: 
+Suggests:
     testthat (>= 3.0.0),
     knitr,
-    rmarkdown
+    rmarkdown,
+    tibble
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true
