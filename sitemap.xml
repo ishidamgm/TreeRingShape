@@ -1,132 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/404.html</loc>
-  </url>
-  <url>
-    <loc>/articles/TreeRingShape.html</loc>
-  </url>
-  <url>
-    <loc>/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>/authors.html</loc>
-  </url>
-  <url>
-    <loc>/index.html</loc>
-  </url>
-  <url>
-    <loc>/news/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/DiskInfo.html</loc>
-  </url>
-  <url>
-    <loc>/reference/Ldeg360.html</loc>
-  </url>
-  <url>
-    <loc>/reference/Llist2dataframe.html</loc>
-  </url>
-  <url>
-    <loc>/reference/Lmove.html</loc>
-  </url>
-  <url>
-    <loc>/reference/Lplot.html</loc>
-  </url>
-  <url>
-    <loc>/reference/Lplot2.html</loc>
-  </url>
-  <url>
-    <loc>/reference/Lrad.plot.html</loc>
-  </url>
-  <url>
-    <loc>/reference/Lrn.html</loc>
-  </url>
-  <url>
-    <loc>/reference/Lsort.html</loc>
-  </url>
-  <url>
-    <loc>/reference/Lsort_all.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ReadShapefile_P00.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ReadShapefile_TreeRingPoints.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ReadShapefile_TreeRings.html</loc>
-  </url>
-  <url>
-    <loc>/reference/TR.html</loc>
-  </url>
-  <url>
-    <loc>/reference/TR_.html</loc>
-  </url>
-  <url>
-    <loc>/reference/TreeRingIndex.html</loc>
-  </url>
-  <url>
-    <loc>/reference/TreeRingShape.html</loc>
-  </url>
-  <url>
-    <loc>/reference/TreeRingsInterpolation.html</loc>
-  </url>
-  <url>
-    <loc>/reference/TreeRingsLines.html</loc>
-  </url>
-  <url>
-    <loc>/reference/TreeRingsPoints.html</loc>
-  </url>
-  <url>
-    <loc>/reference/WriteShapefile_TreeRings.html</loc>
-  </url>
-  <url>
-    <loc>/reference/area.html</loc>
-  </url>
-  <url>
-    <loc>/reference/circumference.html</loc>
-  </url>
-  <url>
-    <loc>/reference/classTreeRingShape-class.html</loc>
-  </url>
-  <url>
-    <loc>/reference/degree.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dst.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dstpp.html</loc>
-  </url>
-  <url>
-    <loc>/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/new_classTreeRingShape.html</loc>
-  </url>
-  <url>
-    <loc>/reference/nstP.html</loc>
-  </url>
-  <url>
-    <loc>/reference/plot_TreeRing.html</loc>
-  </url>
-  <url>
-    <loc>/reference/plot_TreeRing_df.html</loc>
-  </url>
-  <url>
-    <loc>/reference/plot_TreeRings_df.html</loc>
-  </url>
-  <url>
-    <loc>/reference/plot_year_RingArea.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rdst.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rdst_MerginePlus.html</loc>
-  </url>
-  <url>
-    <loc>/reference/seq_deg.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/articles/TreeRingShape.html</loc></url>
+<url><loc>/articles/index.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/news/index.html</loc></url>
+<url><loc>/reference/DiskInfo.html</loc></url>
+<url><loc>/reference/Ldeg360.html</loc></url>
+<url><loc>/reference/Llist2dataframe.html</loc></url>
+<url><loc>/reference/Lmove.html</loc></url>
+<url><loc>/reference/Lplot.html</loc></url>
+<url><loc>/reference/Lplot2.html</loc></url>
+<url><loc>/reference/Lrad.plot.html</loc></url>
+<url><loc>/reference/Lrn.html</loc></url>
+<url><loc>/reference/Lsort.html</loc></url>
+<url><loc>/reference/Lsort_all.html</loc></url>
+<url><loc>/reference/ReadShapefile_P00.html</loc></url>
+<url><loc>/reference/ReadShapefile_TreeRingPoints.html</loc></url>
+<url><loc>/reference/ReadShapefile_TreeRings.html</loc></url>
+<url><loc>/reference/TR.html</loc></url>
+<url><loc>/reference/TR_.html</loc></url>
+<url><loc>/reference/TreeRingIndex.html</loc></url>
+<url><loc>/reference/TreeRingShape.html</loc></url>
+<url><loc>/reference/TreeRingsInterpolation.html</loc></url>
+<url><loc>/reference/TreeRingsLines.html</loc></url>
+<url><loc>/reference/TreeRingsPoints.html</loc></url>
+<url><loc>/reference/WriteShapefile_TreeRings.html</loc></url>
+<url><loc>/reference/area.html</loc></url>
+<url><loc>/reference/circumference.html</loc></url>
+<url><loc>/reference/classTreeRingShape-class.html</loc></url>
+<url><loc>/reference/degree.html</loc></url>
+<url><loc>/reference/dst.html</loc></url>
+<url><loc>/reference/dstpp.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/new_classTreeRingShape.html</loc></url>
+<url><loc>/reference/nstP.html</loc></url>
+<url><loc>/reference/plot_TreeRing.html</loc></url>
+<url><loc>/reference/plot_TreeRing_df.html</loc></url>
+<url><loc>/reference/plot_TreeRings_df.html</loc></url>
+<url><loc>/reference/plot_year_RingArea.html</loc></url>
+<url><loc>/reference/rdst.html</loc></url>
+<url><loc>/reference/rdst_MerginePlus.html</loc></url>
+<url><loc>/reference/seq_deg.html</loc></url>
 </urlset>
+

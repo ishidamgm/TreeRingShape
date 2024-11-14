@@ -3,7 +3,7 @@
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]--></head><body data-spy="scroll" data-target="#toc">
-    
+
 
     <div class="container template-reference-topic">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">TreeRingShape</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.0.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.0.5</span>
       </span>
     </div>
 
@@ -34,20 +34,20 @@
       </ul><ul class="nav navbar-nav navbar-right"><li>
   <a href="https://github.com/ishidamgm/TreeRingShape/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
-     
+
   </a>
 </li>
       </ul></div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-      
+
 
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Write a shapefile of interpolated tree rings</h1>
-    <small class="dont-index">Source: <a href="https://github.com/ishidamgm/TreeRingShape/blob/HEAD/R/ShapeFile.R" class="external-link"><code>R/ShapeFile.R</code></a></small>
+    <small class="dont-index">Source: <a href="https://github.com/ishidamgm/TreeRingShape/blob/main/R/ShapeFile.R" class="external-link"><code>R/ShapeFile.R</code></a></small>
     <div class="hidden name"><code>WriteShapefile_TreeRings.Rd</code></div>
     </div>
 
@@ -61,19 +61,19 @@
 
     <div id="arguments">
     <h2>Arguments</h2>
-    <dl><dt>L2</dt>
+
+
+<dl><dt id="arg-l-">L2<a class="anchor" aria-label="anchor" href="#arg-l-"></a></dt>
 <dd><p>is as list of Tree ring polygons (X, Y)</p></dd>
 
 
-<dt>filename</dt>
+<dt id="arg-filename">filename<a class="anchor" aria-label="anchor" href="#arg-filename"></a></dt>
 <dd><p>is a shape file(path) name written to disk.</p></dd>
 
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    
-
-<p>No return value, called for side effects.</p>
+    <p>No return value, called for side effects.</p>
     </div>
 
     <div id="ref-examples">
@@ -82,13 +82,13 @@
 <span class="r-in"><span><span class="co">#'</span></span></span>
 <span class="r-in"><span><span class="fu">WriteShapefile_TreeRings</span> <span class="op">(</span><span class="va">TR</span><span class="op">@</span><span class="va">L</span>, <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempfile</a></span><span class="op">(</span><span class="st">"TreeRingShape_test"</span>,fileext <span class="op">=</span> <span class="st">".shp"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> writing: substituting ENGCRS["Undefined Cartesian SRS with unknown unit"] for missing CRS</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Writing layer `TreeRingShape_test1b457e488bc3' to data source </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   `/tmp/Rtmp13PuP5/TreeRingShape_test1b457e488bc3.shp' using driver `ESRI Shapefile'</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Writing layer `TreeRingShape_test1ba3549aad4a' to data source </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   `/tmp/Rtmpw5NR5Y/TreeRingShape_test1ba3549aad4a.shp' using driver `ESRI Shapefile'</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Writing 38 features with 2 fields and geometry type Line String.</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/list.files.html" class="external-link">dir</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "TreeRingShape_test1b457e488bc3.dbf" "TreeRingShape_test1b457e488bc3.prj"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3] "TreeRingShape_test1b457e488bc3.shp" "TreeRingShape_test1b457e488bc3.shx"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5] "downlit"                            "file1b45379665f5"                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "TreeRingShape_test1ba3549aad4a.dbf" "TreeRingShape_test1ba3549aad4a.prj"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3] "TreeRingShape_test1ba3549aad4a.shp" "TreeRingShape_test1ba3549aad4a.shx"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5] "downlit"                            "file1ba32a651f29"                  </span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
@@ -104,15 +104,15 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.9.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
       </footer></div>
 
-  
 
 
-  
+
+
 
   </body></html>
 
