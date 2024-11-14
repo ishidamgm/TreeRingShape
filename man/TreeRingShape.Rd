@@ -50,9 +50,10 @@ L_ring.tag='ring')
  slotNames(TR.)
  str(TR.)
  Lplot(TR.@L2)
-
+ return(TR.)
 }
 
- test_TreeRingShape()
+ TR. <- test_TreeRingShape()
+ DiskInfo(TR.)
 
 }

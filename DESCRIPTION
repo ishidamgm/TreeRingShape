@@ -1,7 +1,7 @@
 Package: TreeRingShape
 Type: Package
 Title: Recording Tree-Ring Shapes of Tree Disks with Manual Digitizing and Interpolating Model
-Version: 3.0.4
+Version: 3.0.5
 Authors@R: c(person("Megumi", "ISHIDA",role =c("aut","cre","cph"), email="ishidam@sanchikanri.com"))
 Maintainer: Megumi ISHIDA <ishidam@sanchikanri.com>
 Description: Record all tree-ring Shapefile of tree disk with GIS soft ('Qgis'<https://www.qgis.org/en/site/>) and interpolating model from high resolution tree disk image. 
@@ -14,11 +14,13 @@ Imports:
 Suggests: 
     testthat (>= 3.0.0),
     knitr,
-    rmarkdown
+    rmarkdown,
+    tibble,
+    waldo
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 URL: https://cran.r-project.org/web/packages/TreeRingShape/index.html, https://github.com/ishidamgm/TreeRingShape,       https://ishidamgm.github.io/TreeRingShape/,     https://www.sanchikanri.com/treering/TreeRingShape.html
 BugReports: https://github.com/ishidamgm/TreeRingShape/issues
 Config/testthat/edition: 3

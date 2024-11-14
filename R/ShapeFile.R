@@ -83,9 +83,16 @@ ReadShapefile_TreeRingPoints <- function(filename = "Abies_277_h400_TreeRing_Poi
 ReadShapefile_P00 <- function(filename = "Abies_277_h400_TreeRing_Points.shp", id.tag = "id", ring.tag = "ring") {
   d <- ReadShapefile_TreeRingPoints(filename, id.tag, ring.tag)
   i <- which(d$id == 0)
-  (P00 <- c(d$x[i], d$y[i]))  ### original point P00
+
+  # Check if the center point with id == 0 exists
+  if (length(i) == 0) {
+    stop("Error: Center point with id == 0 not found in the data. Please ensure the input data follows the correct format.")
+  }
+
+  P00 <- c(d$x[i], d$y[i])  ### original point P00
   return(P00)
 }
+
 
 
 

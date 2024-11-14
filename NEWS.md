@@ -1,3 +1,9 @@
+# TreeRingShape 3.0.5 
+* DESCRIPTION Update:
+ Added tibble and waldo to the Suggests field to address any indirect dependencies.
+* Error Handling in ReadShapefile_P00:
+ Modified ReadShapefile_P00 to include a check that confirms the presence of a center point with id == 0 in the data, as this is required for the function to work correctly. If id == 0 is not found, an informative error message is now returned.
+
 # TreeRingShape 3.0.4 
 * URL: "https://cran.r-project.org/web/packages/TreeRingShape/index.html" added in DESCRIPTION.
 * Corrected code of circumference() 

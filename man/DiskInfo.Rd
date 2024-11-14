@@ -17,8 +17,6 @@ data frame of information for tree disk analysed
 \description{
 Return information for tree disk analysed from  TreeRingShape class
 }
-\examples{
-DiskInfo(TR.)
-
-
+\seealso{
+\code{\link{TreeRingShape}}
 }
