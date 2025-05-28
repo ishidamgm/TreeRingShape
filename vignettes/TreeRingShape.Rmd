@@ -153,4 +153,4 @@ Pebesma, E., & Bivand, R. (2023). Spatial Data Science: With
 Applications in R. Chapman and Hall/CRC.
 
 QGIS Development Team. (2024). QGIS Geographic Information System. QGIS
-Association. <https://www.qgis.org/en/site/>
+Association.

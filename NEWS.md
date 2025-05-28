@@ -5,7 +5,6 @@
  Modified ReadShapefile_P00 to include a check that confirms the presence of a center point with id == 0 in the data, as this is required for the function to work correctly. If id == 0 is not found, an informative error message is now returned.
 
 # TreeRingShape 3.0.4 
-* URL: "https://cran.r-project.org/web/packages/TreeRingShape/index.html" added in DESCRIPTION.
 * Corrected code of circumference() 
 * Added DiskInfo() 
 
@@ -15,7 +14,7 @@
      
 # TreeRingShape 3.0.2
 * Added Authors@R field in  DESCRIPTION file.
-* Wrote package names in single quotes , as GIS soft ('Qgis'<https://www.qgis.org/en/site/>)
+* Wrote package names in single quotes , as GIS soft ('Qgis')
 * Added  \\value to following function
        Lplot.Rd, Lplot2.Rd, Lrad.plot.Rd, plot_TreeRing_df.Rd, plot_TreeRing.Rd,
   plot_TreeRings_df.Rd, TreeRingsPoints.Rd, WriteShapefile_TreeRings.Rd
